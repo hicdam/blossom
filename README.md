@@ -16,7 +16,7 @@ cd site && python3 -m http.server 8901
 Then open http://localhost:8901/ (was left running and open in Chrome).
 
 ## Before launch (required inputs, marked in pink on the site)
-1. Founder name, background, photo, qualifications, memberships (About page).
+1. Founder profile is on the About page (no photo, by Damo's decision 2 Sep 2026).
 2. Phone, email, address, legal entity name (footer, contact, legal pages).
 3. Domain: update `DOMAIN` in `site/_build/templates.py`, also in `index.html` head, rebuild.
 4. Form endpoint: replace `REPLACE_WITH_FORM_ENDPOINT...` action in contact.html + welcome.html (or in `pages_b.py`/`build.py` and rebuild). Formspree or similar.

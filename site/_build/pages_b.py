@@ -1,15 +1,6 @@
 # Content and utility pages. COPY DECK V2 verbatim.
 from pages_a import hero
 from templates import DOMAIN
-import os
-
-# Founder portrait: drop a photo at assets/img/photos/damian-hickey.jpg and rebuild.
-# Nothing is shown until the file exists. Never a stock or placeholder image.
-_PORTRAIT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "img", "photos", "damian-hickey.jpg")
-FOUNDER_PORTRAIT = (
-    '<div class="founder-portrait reveal"><img src="assets/img/photos/damian-hickey.jpg" alt="Damian Hickey, founder of Blossom"></div>'
-    if os.path.exists(_PORTRAIT) else ""
-)
 
 FAQ_ITEMS = [
     ("Is Blossom a garden designer, project manager or maintenance company?",
@@ -172,7 +163,6 @@ ABOUT = {
           <span class="eyebrow">Meet the founder</span>
           <h2>Damian Hickey</h2>
         </div>
-''' + FOUNDER_PORTRAIT + '''
         <div class="grid-2" style="align-items: start; margin-top: 18px;">
           <div class="reveal">
             <p>Damian is a designer and project leader with more than 30 years of experience turning complex ideas into delivered outcomes for large organisations and global real-estate environments.</p>

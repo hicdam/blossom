@@ -1,0 +1,704 @@
+<title>Blossom Pricing Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #FDFBF0;
+    --ink: #2C3947;
+    --ink-soft: #55616D;
+    --gorse: #F3EBCF;
+    --yew: #22382B;
+    --tint: #E4EAD8;
+    --lilac: #F3EFF4;
+    --rose: #F1DEE8;
+    --butter: #F7EDCB;
+    --blossom: #CC428A;
+    --hairline: rgba(44, 57, 71, .18);
+    --surface: #FFFFFF;
+    --radius: 14px;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--body); font-size: 16px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.12; margin: 0; text-wrap: balance; color: var(--ink); }
+  h1 { font-size: clamp(34px, 6vw, 46px); }
+  h2 { font-size: 26px; }
+  h3 { font-size: 19px; margin-top: 4px; }
+  p { margin: 0; max-width: 62ch; }
+  .eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--yew); }
+  .lede { font-size: 18px; color: var(--ink-soft); margin-top: 10px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* Header */
+  .masthead { display: flex; flex-direction: column; gap: 8px; padding-bottom: 22px; }
+  .masthead .logo { font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--blossom); letter-spacing: .01em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+  .step { background: var(--tint); border-radius: var(--radius); padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .step b { font-family: var(--display); font-size: 22px; color: var(--yew); }
+  .step span { font-size: 14px; line-height: 1.35; }
+  @media (max-width: 620px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+
+  /* Base price tiles */
+  .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
+  .tile { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 14px 12px; display: flex; flex-direction: column; gap: 4px; min-height: 108px; }
+  .tile small { font-size: 12px; font-weight: 600; color: var(--ink-soft); line-height: 1.25; }
+  .tile strong { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1.1; }
+  .tile em { font-style: normal; font-size: 12px; color: var(--ink-soft); }
+  @media (max-width: 720px) { .tiles { grid-template-columns: repeat(2, 1fr); } .tile:last-child { grid-column: span 2; } }
+
+  /* Sections */
+  section { margin-top: 34px; }
+  section > .eyebrow { display: block; margin-bottom: 6px; }
+  details { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); margin-top: 12px; overflow: hidden; }
+  details[open] { border-color: rgba(34, 56, 43, .35); }
+  summary { list-style: none; cursor: pointer; padding: 16px 18px; display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary:focus-visible { outline: 3px solid var(--blossom); outline-offset: -3px; }
+  summary .name { font-family: var(--display); font-size: 21px; font-weight: 700; }
+  summary .base { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--yew); white-space: nowrap; text-align: right; }
+  summary .base small { display: block; font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  summary .chev { width: 26px; height: 26px; border-radius: 50%; background: var(--gorse); display: grid; place-items: center; font-size: 13px; color: var(--ink); transition: transform .2s ease; }
+  details[open] summary .chev { transform: rotate(180deg); }
+  .body { padding: 4px 18px 20px; display: flex; flex-direction: column; gap: 20px; }
+  .block { display: flex; flex-direction: column; gap: 8px; }
+  .block > .eyebrow { margin-bottom: 2px; }
+
+  /* Factor rows */
+  .factors { display: flex; flex-direction: column; border-top: 1px solid var(--hairline); }
+  .factor { display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; padding: 11px 0; border-bottom: 1px solid var(--hairline); align-items: start; }
+  .factor .what { font-weight: 600; font-size: 15px; }
+  .factor .spot { grid-column: 1; font-size: 13.5px; color: var(--ink-soft); }
+  .chip { justify-self: end; grid-row: 1 / span 2; align-self: center; font-family: var(--display); font-weight: 700; font-size: 16px; padding: 5px 11px; border-radius: 20px; white-space: nowrap; background: var(--tint); color: var(--yew); }
+  .chip.up { background: var(--butter); }
+  .chip.sep { background: var(--lilac); color: var(--ink-soft); font-family: var(--body); font-size: 12.5px; font-weight: 700; letter-spacing: .04em; }
+  .chip.flat { background: var(--tint); }
+
+  /* Ladder (bands) */
+  .ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .rung { border-radius: var(--radius); padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 6px; background: var(--lilac); }
+  .rung:nth-child(2) { background: var(--rose); }
+  .rung:nth-child(3) { background: var(--butter); }
+  .rung strong { font-family: var(--display); font-size: 24px; color: var(--ink); }
+  .rung strong small { font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  .rung ul { margin: 4px 0 0; padding-left: 16px; font-size: 13.5px; }
+  .rung li { margin: 2px 0; }
+  @media (max-width: 620px) { .ladder { grid-template-columns: 1fr; } }
+
+  /* Example */
+  .example { background: var(--gorse); border-radius: var(--radius); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .example .eyebrow { color: var(--ink); }
+  .example table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  .example td { padding: 5px 0; border-top: 1px solid rgba(44,57,71,.12); }
+  .example td:last-child { text-align: right; font-weight: 600; }
+  .example tr:first-child td { border-top: 0; }
+  .example tr.total td { font-family: var(--display); font-size: 17px; font-weight: 700; border-top: 2px solid var(--ink); }
+
+  /* Your call marker */
+  .call { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--blossom); padding: 3px 8px; border-radius: 12px; vertical-align: middle; margin-left: 6px; }
+  .legend { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-soft); margin-top: 12px; }
+
+  /* Scorecard */
+  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 18px; margin-top: 12px; display: flex; flex-direction: column; gap: 16px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+  .seg label { cursor: pointer; }
+  .seg input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .seg span { display: inline-block; padding: 8px 14px; border-radius: 20px; border: 1.5px solid var(--hairline); font-weight: 600; font-size: 14px; }
+  .seg input:checked + span { background: var(--yew); color: #fff; border-color: var(--yew); }
+  .seg input:focus-visible + span { outline: 3px solid var(--blossom); outline-offset: 2px; }
+  .pane { display: none; flex-direction: column; gap: 12px; }
+  .pane.on { display: flex; }
+  .opt { display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hairline); }
+  .opt input[type=checkbox], .opt input[type=radio] { width: 20px; height: 20px; accent-color: var(--yew); margin: 0; }
+  .opt .lab { font-weight: 600; font-size: 15px; }
+  .opt .lab small { display: block; font-weight: 400; font-size: 13px; color: var(--ink-soft); }
+  .opt .eff { font-family: var(--display); font-weight: 700; color: var(--yew); white-space: nowrap; }
+  .field { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hairline); }
+  .field input[type=number] { width: 130px; padding: 8px 10px; border: 1.5px solid var(--hairline); border-radius: 8px; font: inherit; font-weight: 600; text-align: right; background: var(--bg); color: var(--ink); }
+  .field input:focus-visible { outline: 3px solid var(--blossom); outline-offset: 1px; }
+  .result { background: var(--yew); color: #fff; border-radius: var(--radius); padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; align-items: center; }
+  .result .eyebrow { color: #D7E0CF; }
+  .result .big { font-family: var(--display); font-size: 30px; font-weight: 700; line-height: 1.05; grid-column: 2; grid-row: 1 / span 2; text-align: right; }
+  .result .say { font-size: 14px; color: #E9EFE3; max-width: 46ch; }
+  .note { font-size: 13.5px; color: var(--ink-soft); }
+  .tools { display: flex; gap: 10px; align-items: center; }
+  button { font: inherit; font-weight: 700; font-size: 14px; padding: 9px 16px; border-radius: 20px; border: 1.5px solid var(--ink); background: var(--gorse); color: var(--ink); cursor: pointer; }
+  button:focus-visible { outline: 3px solid var(--blossom); outline-offset: 2px; }
+
+  /* Rules + sign-off */
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .rule { background: var(--tint); border-radius: var(--radius); padding: 14px 16px; font-size: 14.5px; }
+  .rule b { display: block; font-family: var(--display); font-size: 17px; margin-bottom: 4px; }
+  @media (max-width: 620px) { .rules { grid-template-columns: 1fr; } }
+  .signoff { margin-top: 12px; display: flex; flex-direction: column; border-top: 1px solid var(--hairline); }
+  .signoff div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hairline); font-size: 14.5px; align-items: center; }
+  .signoff div span:last-child { font-family: var(--display); font-weight: 700; color: var(--yew); white-space: nowrap; }
+  footer { margin-top: 40px; font-size: 13px; color: var(--ink-soft); }
+
+  /* Ask the guide */
+  .ask { background: var(--yew); color: #fff; border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+  .ask .eyebrow { color: #D7E0CF; }
+  .ask h2 { color: #fff; font-size: 22px; }
+  .askrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+  .askrow input[type=text] { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: #fff; font: inherit; font-size: 16px; }
+  .askrow input::placeholder { color: rgba(255,255,255,.65); }
+  .askrow input:focus-visible { outline: 3px solid var(--blossom); outline-offset: 1px; }
+  .ask button { background: var(--gorse); border-color: var(--gorse); }
+  .answer { display: none; background: rgba(255,255,255,.1); border-radius: 10px; padding: 12px 14px; font-size: 15px; line-height: 1.5; white-space: pre-wrap; }
+  .answer.on { display: block; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips button { font-size: 13px; padding: 7px 12px; background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.35); color: #fff; }
+  .ask .note { color: #D7E0CF; }
+  .ask.off { display: none; }
+
+  /* Video reader */
+  .video { background: var(--butter); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .video.off { display: none; }
+  .video h3 { font-size: 18px; }
+  .filerow { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+  .filerow input[type=file] { font: inherit; font-size: 14px; max-width: 100%; }
+  .frames { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .frames img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; display: block; background: var(--tint); }
+  .video textarea { width: 100%; min-height: 64px; padding: 10px 12px; border: 1.5px solid var(--hairline); border-radius: 8px; font: inherit; font-size: 15px; background: var(--bg); color: var(--ink); resize: vertical; }
+  .video textarea:focus-visible { outline: 3px solid var(--blossom); outline-offset: 1px; }
+  .seen { display: none; flex-direction: column; gap: 6px; background: var(--surface); border-radius: 10px; padding: 12px 14px; }
+  .seen.on { display: flex; }
+  .seen ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+  .seen li { margin: 3px 0; }
+  .seen .conf { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .status { font-size: 14px; color: var(--ink-soft); min-height: 1.4em; }
+  @media (prefers-reduced-motion: reduce) { summary .chev { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="logo">Blossom</div>
+    <span class="eyebrow">Internal. Not for clients.</span>
+    <h1>Pricing Guide</h1>
+    <p class="lede">What you saw on the site visit decides the price. Start at the base price, tick the factors, land in a band, confirm in writing.</p>
+    <div class="meta"><span>Version 1, 2 September 2026</span><span>Base prices approved by Damo</span><span>Everything marked <span class="call" style="margin-left:2px">your call</span> is a proposal</span></div>
+  </header>
+
+  <section class="ask off" id="ask">
+    <span class="eyebrow">On site</span>
+    <h2>Ask the guide</h2>
+    <div class="askrow"><input type="text" id="q" placeholder="e.g. They have a pool and two gardeners, what band?" autocomplete="off"><button type="button" id="askBtn">Ask</button></div>
+    <div class="chips" aria-label="Example questions">
+      <button type="button" data-q="What do I charge for a Garden Review 30 miles away?">Review, 30 miles away</button>
+      <button type="button" data-q="Build budget is £70,000 with a pool and retaining walls. What is the design fee?">Design fee, £70k with a pool</button>
+      <button type="button" data-q="They want me to manage a builder they already have for a 2 month job with weekly visits. What do I quote?">Manage their own builder</button>
+      <button type="button" data-q="What is included in the £250 a month band and what pushes it to £350?">£250 or £350?</button>
+    </div>
+    <div class="answer" id="answer" aria-live="polite"></div>
+    <p class="note">Answers come from this guide only. If the guide does not cover it, it will say so.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">How to use it</span>
+    <div class="steps">
+      <div class="step"><b>1</b><span>Do the visit. Note the garden's size, systems, suppliers and any consents.</span></div>
+      <div class="step"><b>2</b><span>Open the offer below. Start at the base price.</span></div>
+      <div class="step"><b>3</b><span>Tick the factors you saw. Each one moves the price a set amount.</span></div>
+      <div class="step"><b>4</b><span>Write the proposal within 5 working days. Every number is a guide until it is in writing.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">The five base prices</span>
+    <div class="tiles">
+      <div class="tile"><small>Garden Review</small><strong class="num">£295</strong><em>Taken off any later fee</em></div>
+      <div class="tile"><small>Garden Design</small><strong class="num">10 to 15%</strong><em>Of build budget, from £3,500</em></div>
+      <div class="tile"><small>Garden Projects</small><strong class="num">£950 / mo</strong><em>Or 10% of build cost</em></div>
+      <div class="tile"><small>Complete Transformation</small><strong class="num">£30k to £80k</strong><em>Client's all-in budget</em></div>
+      <div class="tile"><small>Your Garden Manager</small><strong class="num">£250 / mo</strong><em>Retainer, from</em></div>
+    </div>
+    <div class="legend"><span class="chip flat" style="grid-row:auto">+£</span> adds to the price <span class="chip sep" style="grid-row:auto">SEPARATE</span> quoted on top, at cost or day rate</div>
+  </section>
+
+  <section>
+    <span class="eyebrow">One offer at a time</span>
+
+    <!-- GARDEN REVIEW -->
+    <details open>
+      <summary><span class="name">Garden Review</span><span class="base num">£295<small>fixed, per visit</small></span><span class="chev">&#9660;</span></summary>
+      <div class="body">
+        <div class="block">
+          <span class="eyebrow">What £295 buys</span>
+          <p>Up to 90 minutes on site, one garden up to about half an acre, within 20 miles of Arford, and a written summary within 5 working days. The £295 comes off any later Blossom fee.</p>
+        </div>
+        <div class="block">
+          <span class="eyebrow">What moves it</span>
+          <div class="factors">
+            <div class="factor"><span class="what">Large garden or several distinct gardens <span class="call">your call</span></span><span class="spot">Over half an acre, walled garden plus paddock, or more than one property. Needs a second visit or a half day.</span><span class="chip up">+£150</span></div>
+            <div class="factor"><span class="what">More than 20 miles from Arford</span><span class="spot">See the travel rule at the bottom. Applies to every offer.</span><span class="chip up">+£45 to £95</span></div>
+            <div class="factor"><span class="what">Specialist survey needed</span><span class="spot">Trees near buildings, standing water, big level changes, a listed wall. Recommend the survey. Never guess.</span><span class="chip sep">SEPARATE</span></div>
+          </div>
+        </div>
+        <div class="example">
+          <span class="eyebrow">Example</span>
+          <table><tr><td>Garden Review, one acre with a walled garden and orchard, Haslemere</td><td class="num">£295</td></tr><tr><td>Large garden, half day on site</td><td class="num">+£150</td></tr><tr class="total"><td>Quote</td><td class="num">£445</td></tr></table>
+          <p class="note">Say in the proposal: "Fully credited against any design or management appointment within 12 months."</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- GARDEN DESIGN -->
+    <details>
+      <summary><span class="name">Garden Design</span><span class="base num">10 to 15%<small>of build budget, from £3,500</small></span><span class="chev">&#9660;</span></summary>
+      <div class="body">
+        <div class="block">
+          <span class="eyebrow">How the fee is built</span>
+          <p>Agree the working build budget first. Pick the percentage from the complexity you saw. Multiply. That is the fixed fee, and it does not move if the build price moves later. The floor is £3,500.</p>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Pick the percentage from what you saw</span>
+          <div class="ladder">
+            <div class="rung"><strong>10%<small> simple</small></strong><ul><li>Mostly planting and lawn</li><li>Flat site, no retaining</li><li>No structures, no consents</li><li>One contractor can build it</li></ul></div>
+            <div class="rung"><strong>12.5%<small> mixed</small></strong><ul><li>Hard and soft landscaping</li><li>Some level change</li><li>One structure: pergola, garden room, outdoor kitchen</li><li>Lighting or irrigation</li></ul></div>
+            <div class="rung"><strong>15%<small> complex</small></strong><ul><li>Several levels or retaining walls</li><li>Water: pool, pond, spa</li><li>Building that needs planning or building regs</li><li>Listed, conservation area or tree orders</li><li>Bespoke commissions in stone, metal or timber</li></ul></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Stages, so a client can stop part way <span class="call">your call</span></span>
+          <div class="factors">
+            <div class="factor"><span class="what">Concept and masterplan</span><span class="spot">Layout, mood, planting direction, budget check.</span><span class="chip flat">35%</span></div>
+            <div class="factor"><span class="what">Developed design</span><span class="spot">Materials, levels, planting plan, lighting layout.</span><span class="chip flat">35%</span></div>
+            <div class="factor"><span class="what">Technical pack</span><span class="spot">Construction drawings, specification, tender information.</span><span class="chip flat">30%</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Always quoted on top</span>
+          <div class="factors">
+            <div class="factor"><span class="what">Topographical, tree, drainage or ecology survey</span><span class="spot">At the surveyor's cost. Blossom coordinates it.</span><span class="chip sep">AT COST</span></div>
+            <div class="factor"><span class="what">Structural engineer, planning consultant, planning fees</span><span class="spot">Any retaining wall over a metre, any building, any listed element.</span><span class="chip sep">AT COST</span></div>
+            <div class="factor"><span class="what">Revisions beyond two rounds per stage <span class="call">your call</span></span><span class="spot">Third round onwards at the day rate.</span><span class="chip sep">DAY RATE</span></div>
+          </div>
+        </div>
+        <div class="example">
+          <span class="eyebrow">Example</span>
+          <table><tr><td>Agreed build budget, mixed garden with pergola and lighting, Farnham</td><td class="num">£45,000</td></tr><tr><td>Complexity: mixed</td><td class="num">12.5%</td></tr><tr class="total"><td>Fixed design fee</td><td class="num">£5,625</td></tr><tr><td>Topographical survey, at cost, on top</td><td class="num">approx. £650</td></tr></table>
+        </div>
+      </div>
+    </details>
+
+    <!-- GARDEN PROJECTS -->
+    <details>
+      <summary><span class="name">Garden Projects</span><span class="base num">£950 / mo<small>or 10% of build cost</small></span><span class="chev">&#9660;</span></summary>
+      <div class="body">
+        <div class="block">
+          <span class="eyebrow">First choose the model</span>
+          <div class="ladder" style="grid-template-columns: 1fr 1fr;">
+            <div class="rung"><strong>Monthly<small> from £950</small></strong><ul><li>One or two trades</li><li>Up to about 3 months on site</li><li>Build under about £25,000</li><li>Client already has quotes or a builder</li></ul></div>
+            <div class="rung"><strong>Percentage<small> 10% of build</small></strong><ul><li>Several trades to coordinate</li><li>Tender needed to find the contractor</li><li>Build over about £25,000</li><li>Full tender to handover</li></ul></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Monthly model: what £950 buys</span>
+          <p>One site inspection a week, one contractor, a weekly written update, checking invoices against progress, snagging and handover.</p>
+        </div>
+        <div class="block">
+          <span class="eyebrow">What moves the monthly fee <span class="call">your call</span></span>
+          <div class="factors">
+            <div class="factor"><span class="what">Twice-weekly inspections</span><span class="spot">Fast-moving build, expensive materials, or a client who wants closer control.</span><span class="chip up">+£350 / mo</span></div>
+            <div class="factor"><span class="what">Each trade beyond two</span><span class="spot">Landscaper plus electrician plus joiner plus pool company: that is two extra.</span><span class="chip up">+£150 / mo each</span></div>
+            <div class="factor"><span class="what">Working with the client's own designer</span><span class="spot">Someone else's drawings to check, query and coordinate.</span><span class="chip up">+£150 / mo</span></div>
+            <div class="factor"><span class="what">Running a tender</span><span class="spot">Writing the brief, three consistent quotes, comparison and recommendation.</span><span class="chip up">+£750 once</span></div>
+            <div class="factor"><span class="what">Consents and permissions</span><span class="spot">Planning, building regs, tree orders, party wall. Blossom's time, plus the fees at cost.</span><span class="chip up">+£450 once</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Percentage model</span>
+          <div class="factors">
+            <div class="factor"><span class="what">Standard multi-trade project</span><span class="spot">Tender, contract, payment stages, weekly inspection, snagging, handover.</span><span class="chip flat">10%</span></div>
+            <div class="factor"><span class="what">Complex, with consents or water <span class="call">your call</span></span><span class="spot">Pool, big retaining, a building with planning.</span><span class="chip up">12%</span></div>
+            <div class="factor"><span class="what">Minimum fee <span class="call">your call</span></span><span class="spot">So a small percentage job never falls below the monthly model.</span><span class="chip flat">£2,500</span></div>
+          </div>
+        </div>
+        <div class="example">
+          <span class="eyebrow">Two examples</span>
+          <table><tr><td>Patio and pergola, one landscaper, 3 months, weekly visits</td><td class="num">3 &times; £950</td></tr><tr class="total"><td>Quote</td><td class="num">£2,850</td></tr></table>
+          <table style="margin-top:10px"><tr><td>Whole back garden, four trades, tender to handover, build £60,000</td><td class="num">10%</td></tr><tr class="total"><td>Quote</td><td class="num">£6,000</td></tr></table>
+        </div>
+      </div>
+    </details>
+
+    <!-- COMPLETE TRANSFORMATION -->
+    <details>
+      <summary><span class="name">Complete Transformation</span><span class="base num">£30k to £80k<small>client's all-in budget</small></span><span class="chev">&#9660;</span></summary>
+      <div class="body">
+        <div class="block">
+          <span class="eyebrow">Read this the right way round</span>
+          <p>£30,000 to £80,000 is what the client spends in total. Blossom's fee sits inside that number. Design is 10 to 15% of the build and project management is 10%, so Blossom is 20 to 25% of the build cost.</p>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Package rate <span class="call">your call</span></span>
+          <div class="factors">
+            <div class="factor"><span class="what">Design plus management appointed together</span><span class="spot">One appointment, one fee, one point of responsibility. Slightly cheaper than buying the two separately.</span><span class="chip flat">20% of build</span></div>
+            <div class="factor"><span class="what">Complex site</span><span class="spot">Same triggers as the 15% design band: water, levels, planning, listed.</span><span class="chip up">25% of build</span></div>
+            <div class="factor"><span class="what">First three months of Your Garden Manager included</span><span class="spot">Planting establishment and defects are watched by the person who designed it. Then the client decides whether to keep the retainer.</span><span class="chip flat">included</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">How to turn a budget into a quote</span>
+          <p>All-in budget divided by 1.2 is the build. The rest is Blossom. So on the standard package a £60,000 budget means about £50,000 of build and £10,000 for Blossom.</p>
+        </div>
+        <div class="example">
+          <span class="eyebrow">Example</span>
+          <table><tr><td>Client's all-in budget, Godalming, mixed garden with garden room</td><td class="num">£60,000</td></tr><tr><td>Build, at 20% package rate (£60,000 &divide; 1.2)</td><td class="num">£50,000</td></tr><tr class="total"><td>Blossom fee, fixed</td><td class="num">£10,000</td></tr><tr><td>Surveys, engineer, planning fees, on top at cost</td><td class="num">approx. £1,500</td></tr></table>
+        </div>
+      </div>
+    </details>
+
+    <!-- YOUR GARDEN MANAGER -->
+    <details>
+      <summary><span class="name">Your Garden Manager</span><span class="base num">£250 / mo<small>retainer, from</small></span><span class="chev">&#9660;</span></summary>
+      <div class="body">
+        <div class="block">
+          <span class="eyebrow">Three bands <span class="call">your call</span></span>
+          <div class="ladder">
+            <div class="rung"><strong class="num">£250<small> / month</small></strong><ul><li>One visit a month</li><li>Up to 3 suppliers</li><li>No complex systems</li><li>Office-hours response</li><li>Up to about half an acre</li></ul></div>
+            <div class="rung"><strong class="num">£350<small> / month</small></strong><ul><li>Fortnightly visits</li><li>4 to 6 suppliers</li><li>One or two systems: irrigation, lighting, pond</li><li>Monthly written report</li></ul></div>
+            <div class="rung"><strong class="num">£500<small> / month</small></strong><ul><li>Weekly visits</li><li>Over an acre, or several gardens</li><li>Pool or spa, lighting, irrigation, gates, buildings</li><li>Briefing staff or a resident gardener</li><li>7-day reactive cover</li><li>Spend authority up to an agreed limit</li></ul></div>
+          </div>
+          <p class="note">Above £500: second homes, several properties, events. Quote it bespoke.</p>
+        </div>
+        <div class="block">
+          <span class="eyebrow">How to pick the band on site</span>
+          <div class="factors">
+            <div class="factor"><span class="what">Count the systems</span><span class="spot">Irrigation, lighting, pool or spa, pond or water feature, electric gates or security, garden buildings with power. Each one is a thing that will break.</span><span class="chip flat">0 &rarr; £250, 1 to 2 &rarr; £350, 3+ &rarr; £500</span></div>
+            <div class="factor"><span class="what">Count the suppliers</span><span class="spot">Gardener, tree surgeon, pool company, electrician, irrigation firm, fencing, lawn treatment.</span><span class="chip flat">up to 3, 4 to 6, 7+</span></div>
+            <div class="factor"><span class="what">Ask how fast they need you</span><span class="spot">"If the pump fails on a Saturday, what do you expect?" Weekend cover is the £500 band.</span><span class="chip flat">hours, days, 7-day</span></div>
+            <div class="factor"><span class="what">The highest band any factor lands in is the band</span><span class="spot">Two systems but 7-day cover wanted: £500.</span><span class="chip flat">take the max</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <span class="eyebrow">Starting and stopping <span class="call">your call</span></span>
+          <div class="factors">
+            <div class="factor"><span class="what">Onboarding: the Garden Management Review</span><span class="spot">Same visit as a Garden Review, plus the asset and supplier register and the first management plan. Credited once the retainer starts.</span><span class="chip flat">£295, credited</span></div>
+            <div class="factor"><span class="what">Minimum term</span><span class="spot">Six months, then rolling monthly with one month's notice. Long enough to see a full season turn.</span><span class="chip flat">6 months</span></div>
+            <div class="factor"><span class="what">Supplier work</span><span class="spot">Always at the supplier's invoice. Any commission or margin is written into the proposal.</span><span class="chip sep">SEPARATE</span></div>
+            <div class="factor"><span class="what">Projects</span><span class="spot">Anything with a start and a finish is scoped as a Garden Project on top.</span><span class="chip sep">SEPARATE</span></div>
+          </div>
+        </div>
+        <div class="example">
+          <span class="eyebrow">Example</span>
+          <table><tr><td>Three-quarter acre, Liphook. Irrigation and lighting. Gardener, tree surgeon, lawn company, electrician. Wants a monthly report.</td><td class="num">2 systems, 4 suppliers</td></tr><tr class="total"><td>Band</td><td class="num">£350 / month</td></tr><tr><td>Onboarding review, credited against month one</td><td class="num">£295</td></tr></table>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- SCORECARD -->
+  <section>
+    <span class="eyebrow">Site visit scorecard</span>
+    <h2>Tick what you saw. It lands on a number.</h2>
+    <p class="note" style="margin-top:6px">Pre-filled with an example so you can see it working. Press Clear before a real visit, or start from a video.</p>
+    <div class="card">
+      <div class="video off" id="video">
+        <span class="eyebrow">Start from a video (optional)</span>
+        <h3>Film a slow walk round. The guide reads it and pre-fills the scorecard.</h3>
+        <p class="note">Nothing is stored. Eight still frames go to Claude with your notes, then you check the result below.</p>
+        <div class="filerow"><input type="file" id="vid" accept="video/*"><button type="button" id="readBtn" disabled>Read the video</button></div>
+        <div class="frames" id="frames" hidden></div>
+        <textarea id="notes" placeholder="Anything you said out loud or noticed: number of gardeners, what is broken, what they asked for, distance from Arford."></textarea>
+        <div class="status" id="vStatus"></div>
+        <div class="seen" id="seen"><span class="conf" id="conf"></span><ul id="seenList"></ul></div>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Offer">
+        <label><input type="radio" name="offer" value="review"><span>Garden Review</span></label>
+        <label><input type="radio" name="offer" value="design"><span>Garden Design</span></label>
+        <label><input type="radio" name="offer" value="projects"><span>Garden Projects</span></label>
+        <label><input type="radio" name="offer" value="manager" checked><span>Your Garden Manager</span></label>
+      </div>
+
+      <div class="pane" data-pane="review">
+        <label class="opt"><input type="checkbox" data-add="150"><span class="lab">Large or several gardens<small>Over half an acre or more than one property</small></span><span class="eff num">+£150</span></label>
+        <label class="opt"><input type="checkbox" data-add="45"><span class="lab">20 to 40 miles from Arford</span><span class="eff num">+£45</span></label>
+        <label class="opt"><input type="checkbox" data-add="95"><span class="lab">Over 40 miles from Arford</span><span class="eff num">+£95</span></label>
+      </div>
+
+      <div class="pane" data-pane="design">
+        <div class="field"><span class="lab">Agreed build budget (£)</span><input type="number" id="dBudget" value="45000" min="0" step="500"></div>
+        <label class="opt"><input type="radio" name="dPct" value="10"><span class="lab">Simple<small>Planting and lawn, flat, no structures</small></span><span class="eff">10%</span></label>
+        <label class="opt"><input type="radio" name="dPct" value="12.5" checked><span class="lab">Mixed<small>Hard and soft, some levels, one structure, lighting or irrigation</small></span><span class="eff">12.5%</span></label>
+        <label class="opt"><input type="radio" name="dPct" value="15"><span class="lab">Complex<small>Water, retaining, planning, listed, bespoke</small></span><span class="eff">15%</span></label>
+      </div>
+
+      <div class="pane" data-pane="projects">
+        <div class="field"><span class="lab">Months on site</span><input type="number" id="pMonths" value="3" min="1" max="24" step="1"></div>
+        <label class="opt"><input type="checkbox" data-monthly="350"><span class="lab">Twice-weekly inspections</span><span class="eff num">+£350 / mo</span></label>
+        <div class="field"><span class="lab">Trades beyond two</span><input type="number" id="pTrades" value="0" min="0" max="10" step="1"></div>
+        <label class="opt"><input type="checkbox" data-monthly="150"><span class="lab">Client's own designer to coordinate</span><span class="eff num">+£150 / mo</span></label>
+        <label class="opt"><input type="checkbox" data-once="750"><span class="lab">Run a tender</span><span class="eff num">+£750</span></label>
+        <label class="opt"><input type="checkbox" data-once="450"><span class="lab">Consents and permissions</span><span class="eff num">+£450</span></label>
+        <p class="note">If this comes out above 10% of the build cost, or there are more than two trades, switch to the percentage model.</p>
+      </div>
+
+      <div class="pane on" data-pane="manager">
+        <div class="field"><span class="lab">Systems<small style="display:block;font-weight:400;color:var(--ink-soft)">Irrigation, lighting, pool, pond, gates, powered buildings</small></span><input type="number" id="mSystems" value="2" min="0" max="12" step="1"></div>
+        <div class="field"><span class="lab">Suppliers</span><input type="number" id="mSuppliers" value="4" min="0" max="20" step="1"></div>
+        <label class="opt"><input type="radio" name="mCover" value="0" checked><span class="lab">Office-hours response is fine</span><span class="eff">£250 band</span></label>
+        <label class="opt"><input type="radio" name="mCover" value="1"><span class="lab">Wants a reply within the day, monthly report</span><span class="eff">£350 band</span></label>
+        <label class="opt"><input type="radio" name="mCover" value="2"><span class="lab">Wants 7-day cover, weekly visits or staff briefing</span><span class="eff">£500 band</span></label>
+        <label class="opt"><input type="checkbox" id="mAcre"><span class="lab">Over an acre, or several gardens</span><span class="eff">£500 band</span></label>
+      </div>
+
+      <div class="result">
+        <span class="eyebrow">Quote band</span>
+        <span class="big num" id="rBig">£350 / month</span>
+        <span class="say" id="rSay">Two systems and four suppliers put this in the middle band. Add the £295 onboarding review, credited against month one.</span>
+      </div>
+      <div class="tools"><button type="button" id="clear">Clear</button><span class="note">Travel over 20 miles adds £45 to £95 per visit on any offer.</span></div>
+    </div>
+  </section>
+
+  <!-- UNIVERSAL -->
+  <section>
+    <span class="eyebrow">Applies to every offer</span>
+    <h2>The rules that never change</h2>
+    <div class="rules">
+      <div class="rule"><b>As a guide, until it is in writing</b>Every number on the website and in this guide is a guide. The proposal is the price.</div>
+      <div class="rule"><b>No price without a visit</b>The Garden Review is the only thing priced before you have stood in the garden.</div>
+      <div class="rule"><b>Nothing hidden</b>Any supplier commission, procurement fee or product margin is written into the proposal before the client says yes.</div>
+      <div class="rule"><b>Third-party costs at cost</b>Surveys, engineers, planning fees and supplier invoices pass through at cost. Blossom's fee is Blossom's fee.</div>
+      <div class="rule"><b>Travel <span class="call">your call</span></b>Within 20 miles of Arford is included. 20 to 40 miles adds £45 a visit. Over 40 miles adds £95 a visit, or say no.</div>
+      <div class="rule"><b>Urgency <span class="call">your call</span></b>Work needed to start inside two weeks adds 25% to Blossom's fee. It costs you other clients' time.</div>
+      <div class="rule"><b>Day rate for extras <span class="call">your call</span></b>£600 a day, £80 an hour. Used for extra revision rounds, extra visits and anything outside the appointment.</div>
+      <div class="rule"><b>VAT <span class="call">your call</span></b>Decide whether Blossom registers. Below the £90,000 turnover threshold you do not have to. Until then, prices are the price.</div>
+    </div>
+  </section>
+
+  <!-- SIGN-OFF -->
+  <section>
+    <span class="eyebrow">Still your call</span>
+    <h2>Twelve numbers to approve or change</h2>
+    <p class="note" style="margin-top:6px">The five base prices are approved and live. These are the working numbers behind them. Say yes, give a number, or hold.</p>
+    <div class="signoff">
+      <div><span>Large garden add-on to a Garden Review</span><span class="num">+£150</span></div>
+      <div><span>Design stage split, so a client can stop after concept</span><span class="num">35 / 35 / 30</span></div>
+      <div><span>Projects monthly adders: twice-weekly, extra trade, client's designer</span><span class="num">+£350, +£150, +£150</span></div>
+      <div><span>Projects one-off adders: tender, consents</span><span class="num">+£750, +£450</span></div>
+      <div><span>Projects complex percentage and minimum fee</span><span class="num">12%, £2,500</span></div>
+      <div><span>Transformation package rate, standard and complex</span><span class="num">20%, 25%</span></div>
+      <div><span>First three months of Your Garden Manager included with a Transformation</span><span>yes / no</span></div>
+      <div><span>Your Garden Manager bands</span><span class="num">£250, £350, £500</span></div>
+      <div><span>Manager onboarding review, credited, and minimum term</span><span class="num">£295, 6 months</span></div>
+      <div><span>Travel bands</span><span class="num">+£45, +£95</span></div>
+      <div><span>Urgency uplift</span><span class="num">+25%</span></div>
+      <div><span>Day rate and hourly rate for extras</span><span class="num">£600, £80</span></div>
+    </div>
+  </section>
+
+  <footer>Blossom internal pricing guide. Base prices approved 2 September 2026. Source for comparables: Merit Estates country house management £90 to £250 a month, 1HomeManager from £199 a month, Checkatrade Surrey maintenance visit average £228, Society of Garden Designers fee scale.</footer>
+</div>
+
+<script>
+(function () {
+  var gbp = function (n) { return "£" + Math.round(n).toLocaleString("en-GB"); };
+  var big = document.getElementById("rBig"), say = document.getElementById("rSay");
+  var panes = document.querySelectorAll(".pane");
+  var offer = function () { return document.querySelector('input[name="offer"]:checked').value; };
+
+  function showPane() {
+    var o = offer();
+    panes.forEach(function (p) { p.classList.toggle("on", p.dataset.pane === o); });
+    compute();
+  }
+
+  function compute() {
+    var o = offer(), pane = document.querySelector('.pane[data-pane="' + o + '"]');
+    if (o === "review") {
+      var t = 295;
+      pane.querySelectorAll("input[data-add]:checked").forEach(function (c) { t += +c.dataset.add; });
+      big.textContent = gbp(t);
+      say.textContent = t === 295 ? "Standard review. Say it is fully credited against any later appointment within 12 months." : "Base £295 plus the add-ons you ticked. Still credited against any later appointment.";
+    }
+    if (o === "design") {
+      var b = +document.getElementById("dBudget").value || 0;
+      var pct = +document.querySelector('input[name="dPct"]:checked').value;
+      var fee = Math.max(3500, b * pct / 100);
+      big.textContent = gbp(fee);
+      say.textContent = (b * pct / 100 < 3500 ? "Below the £3,500 floor, so the floor applies. " : "") + pct + "% of " + gbp(b) + ", fixed. Surveys and engineers on top at cost. Stages 35 / 35 / 30.";
+    }
+    if (o === "projects") {
+      var m = +document.getElementById("pMonths").value || 1;
+      var monthly = 950, once = 0;
+      pane.querySelectorAll("input[data-monthly]:checked").forEach(function (c) { monthly += +c.dataset.monthly; });
+      monthly += 150 * (+document.getElementById("pTrades").value || 0);
+      pane.querySelectorAll("input[data-once]:checked").forEach(function (c) { once += +c.dataset.once; });
+      var total = monthly * m + once;
+      big.textContent = gbp(total);
+      say.textContent = gbp(monthly) + " a month for " + m + " month" + (m === 1 ? "" : "s") + (once ? ", plus " + gbp(once) + " one-off" : "") + ". Check it against 10% of the build cost. Above that, or more than two trades, switch to the percentage model.";
+    }
+    if (o === "manager") {
+      var sys = +document.getElementById("mSystems").value || 0;
+      var sup = +document.getElementById("mSuppliers").value || 0;
+      var cover = +document.querySelector('input[name="mCover"]:checked').value;
+      var acre = document.getElementById("mAcre").checked;
+      var band = 0;
+      if (sys >= 1) band = Math.max(band, 1); if (sys >= 3) band = Math.max(band, 2);
+      if (sup >= 4) band = Math.max(band, 1); if (sup >= 7) band = Math.max(band, 2);
+      band = Math.max(band, cover); if (acre) band = 2;
+      var prices = [250, 350, 500];
+      big.textContent = gbp(prices[band]) + " / month";
+      var why = [];
+      why.push(sys + " system" + (sys === 1 ? "" : "s")); why.push(sup + " supplier" + (sup === 1 ? "" : "s"));
+      if (acre) why.push("over an acre");
+      if (cover === 2) why.push("7-day cover"); else if (cover === 1) why.push("same-day reply and monthly report");
+      say.textContent = why.join(", ") + (band === 0 ? " keep this in the entry band." : band === 1 ? " put this in the middle band." : " put this in the top band.") + " Add the £295 onboarding review, credited against month one. Six-month minimum.";
+    }
+  }
+
+  document.querySelectorAll('input[name="offer"]').forEach(function (r) { r.addEventListener("change", showPane); });
+  document.querySelectorAll(".pane input").forEach(function (i) { i.addEventListener("input", compute); i.addEventListener("change", compute); });
+  document.getElementById("clear").addEventListener("click", function () {
+    document.querySelectorAll('.pane input[type="checkbox"]').forEach(function (c) { c.checked = false; });
+    document.getElementById("dBudget").value = ""; document.getElementById("pMonths").value = 1; document.getElementById("pTrades").value = 0;
+    document.getElementById("mSystems").value = 0; document.getElementById("mSuppliers").value = 0;
+    document.querySelector('input[name="mCover"][value="0"]').checked = true;
+    document.querySelector('input[name="dPct"][value="10"]').checked = true;
+    compute();
+  });
+  compute();
+
+  /* Setters the video reader uses to pre-fill the scorecard */
+  window.__blossomSet = function (r) {
+    if (r.complexity) { var v = { simple: "10", mixed: "12.5", complex: "15" }[r.complexity]; if (v) document.querySelector('input[name="dPct"][value="' + v + '"]').checked = true; }
+    if (Array.isArray(r.systems)) document.getElementById("mSystems").value = r.systems.length;
+    if (r.size === "over an acre") document.getElementById("mAcre").checked = true; else if (r.size && r.size !== "unclear") document.getElementById("mAcre").checked = false;
+    if (typeof r.manager_band === "number") document.querySelector('input[name="mCover"][value="' + Math.min(2, Math.max(0, r.manager_band)) + '"]').checked = true;
+    compute();
+  };
+})();
+
+/* ---------- Claude-powered parts: Ask the guide, and Read the video ---------- */
+(function () {
+  var askSec = document.getElementById("ask"), vidSec = document.getElementById("video");
+  var sampleNs = null, caps = null;
+
+  function guideText() {
+    var parts = [];
+    document.querySelectorAll("section, header").forEach(function (el) {
+      if (el.id === "ask" || el.querySelector(".card")) return;
+      parts.push(el.innerText.replace(/\s+\n/g, "\n").replace(/[ \t]+/g, " "));
+    });
+    return parts.join("\n\n");
+  }
+
+  var RULES = "You are Blossom's internal pricing guide. Blossom is Damian Hickey's garden design and complete garden management practice in Surrey, Hampshire and Sussex. Damian is asking you on a site visit. Answer only from the guide text below. Plain English, short sentences, no jargon, under 90 words, give the number and one line of why. Use 'as a guide' for every price. Never use an em dash. If the guide does not cover the question, say 'The guide does not cover that' and name what Damian should decide. Anything marked 'your call' in the guide is a proposal not yet approved: say so if you rely on it.\n\nGUIDE:\n";
+  var turns = [];
+
+  async function ask(q) {
+    var out = document.getElementById("answer");
+    if (!q.trim() || !sampleNs) return;
+    out.classList.add("on"); out.textContent = "Thinking...";
+    turns.push({ role: "user", content: q });
+    if (turns.length > 8) turns = turns.slice(-8);
+    var input = [{ role: "user", content: RULES + guideText() }, { role: "assistant", content: "Ready." }].concat(turns);
+    try {
+      var r = await sampleNs(input, { onText: function (e) { out.textContent = e.text; }, cache: false });
+      turns.push({ role: "assistant", content: r.text });
+    } catch (e) {
+      turns.pop();
+      out.textContent = e && e.text ? e.text : (e && e.code === "rate_limited" ? "Too many questions in a row. Wait a moment and ask again." : e && e.code === "not_granted" ? "Asking is switched off in this viewer." : "Could not get an answer. Try again.");
+    }
+  }
+  document.getElementById("askBtn").addEventListener("click", function () { ask(document.getElementById("q").value); });
+  document.getElementById("q").addEventListener("keydown", function (e) { if (e.key === "Enter") ask(e.target.value); });
+  document.querySelectorAll(".chips button").forEach(function (b) { b.addEventListener("click", function () { document.getElementById("q").value = b.dataset.q; ask(b.dataset.q); }); });
+
+  /* Video: pick frames locally, send as images */
+  var frames = [];
+  async function extract(file, count, type) {
+    var url = URL.createObjectURL(file), v = document.createElement("video");
+    v.muted = true; v.playsInline = true; v.preload = "auto"; v.src = url;
+    await new Promise(function (res, rej) { v.onloadedmetadata = res; v.onerror = function () { rej(new Error("cannot play")); }; });
+    var dur = isFinite(v.duration) && v.duration > 0 ? v.duration : 0;
+    var scale = Math.min(1, 1024 / (v.videoWidth || 1024)), c = document.createElement("canvas");
+    c.width = Math.round((v.videoWidth || 1024) * scale); c.height = Math.round((v.videoHeight || 576) * scale);
+    var ctx = c.getContext("2d"), out = [];
+    for (var i = 0; i < count; i++) {
+      var t = dur ? dur * (i + 0.5) / count : 0;
+      await new Promise(function (res) { v.onseeked = res; v.currentTime = t; });
+      ctx.drawImage(v, 0, 0, c.width, c.height);
+      out.push(await new Promise(function (r) { c.toBlob(r, type, 0.82); }));
+    }
+    URL.revokeObjectURL(url);
+    return out;
+  }
+  var vid = document.getElementById("vid"), readBtn = document.getElementById("readBtn"), st = document.getElementById("vStatus"), fr = document.getElementById("frames");
+  vid.addEventListener("change", async function () {
+    var f = vid.files && vid.files[0]; frames = []; fr.innerHTML = ""; fr.hidden = true; readBtn.disabled = true;
+    document.getElementById("seen").classList.remove("on");
+    if (!f) return;
+    st.textContent = "Pulling frames from the video...";
+    try {
+      var type = caps.images.mediaTypes.indexOf("image/jpeg") !== -1 ? "image/jpeg" : caps.images.mediaTypes[0];
+      frames = await extract(f, Math.min(8, caps.images.maxCount), type);
+      frames.forEach(function (b) { var img = document.createElement("img"); img.src = URL.createObjectURL(b); img.alt = "Frame from the video"; fr.appendChild(img); });
+      fr.hidden = false; readBtn.disabled = false;
+      st.textContent = frames.length + " frames ready. Add any notes, then press Read the video.";
+    } catch (e) { st.textContent = "Could not read that video in this browser. Try a shorter clip or a different format."; }
+  });
+  readBtn.addEventListener("click", async function () {
+    if (!frames.length || !sampleNs) return;
+    readBtn.disabled = true; st.textContent = "Reading...";
+    var notes = document.getElementById("notes").value.trim();
+    var prompt = "These are " + frames.length + " still frames, in order, from a slow walk-round video of a client's garden, filmed by Damian Hickey of Blossom (garden design and complete garden management, Surrey, Hampshire, Sussex) on a site visit. " +
+      (notes ? "Damian's notes: \"" + notes + "\". " : "") +
+      "Fill in Blossom's pricing factors from what you can actually see. Never invent; use 'unclear' when you cannot tell. Reply with only a JSON object with these keys: " +
+      "size (one of: under half an acre, half to one acre, over an acre, unclear); " +
+      "systems (array, only from: irrigation, lighting, pool or spa, pond or water feature, electric gates or security, powered garden building); " +
+      "structures (array of short strings: pergola, garden room, greenhouse, outdoor kitchen, decking, retaining wall, etc.); " +
+      "levels (one of: flat, some change, several levels or retaining); " +
+      "consent_flags (array, only from: listed or historic building, conservation area cues, large trees near buildings, shared boundary, building that may need planning); " +
+      "suppliers_evidence (array of short strings for trades clearly at work or clearly needed); " +
+      "complexity (simple, mixed or complex, using Blossom's design bands: simple = planting and lawn, flat, no structures; mixed = hard and soft, some levels, one structure, lighting or irrigation; complex = water, several levels or retaining, buildings needing planning, listed, bespoke); " +
+      "manager_band (0, 1 or 2: 0 = no systems and up to 3 suppliers, 1 = one or two systems or 4 to 6 suppliers, 2 = three or more systems, over an acre, pool or spa, or 7-day cover requested); " +
+      "confidence (low, medium or high); " +
+      "notes (array of up to 5 short plain-English observations that affect the price, no em dashes).";
+    try {
+      var r = await sampleNs.json(prompt, { images: frames, modelTier: "default" });
+      var seen = document.getElementById("seen"), list = document.getElementById("seenList");
+      list.innerHTML = "";
+      var lines = [];
+      lines.push("Size: " + (r.size || "unclear"));
+      lines.push("Systems: " + ((r.systems && r.systems.length) ? r.systems.join(", ") : "none seen"));
+      if (r.structures && r.structures.length) lines.push("Structures: " + r.structures.join(", "));
+      lines.push("Levels: " + (r.levels || "unclear"));
+      if (r.consent_flags && r.consent_flags.length) lines.push("Watch for consents: " + r.consent_flags.join(", "));
+      if (r.suppliers_evidence && r.suppliers_evidence.length) lines.push("Trades in evidence: " + r.suppliers_evidence.join(", "));
+      lines.push("Design band: " + (r.complexity || "unclear"));
+      (r.notes || []).forEach(function (n) { lines.push(n); });
+      lines.forEach(function (l) { var li = document.createElement("li"); li.textContent = l; list.appendChild(li); });
+      document.getElementById("conf").textContent = "Confidence " + (r.confidence || "unknown") + ". Check every line against what you saw.";
+      seen.classList.add("on");
+      window.__blossomSet(r);
+      st.textContent = "Scorecard pre-filled below. Set the suppliers count yourself, the video cannot count them.";
+      document.querySelector(".seg").scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) {
+      st.textContent = e && e.code === "invalid_json" ? "The reading came back unreadable. Press Read the video again." : e && e.code === "image_rejected" ? "One of the frames was rejected. Try a different clip." : e && e.code === "rate_limited" ? "Too many reads in a row. Wait a moment." : "Could not read the video. Try again.";
+    }
+    readBtn.disabled = false;
+  });
+
+  /* Light the Claude features up only where they can run */
+  (async function () {
+    try {
+      sampleNs = await claude.use("sample");
+      if (!sampleNs) return;
+      askSec.classList.remove("off");
+      caps = await sampleNs.limits().catch(function () { return null; });
+      if (caps && caps.images) { vidSec.classList.remove("off"); vid.accept = "video/*"; }
+    } catch (e) { /* stay hidden */ }
+  })();
+})();
+</script>

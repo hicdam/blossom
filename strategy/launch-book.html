@@ -1,0 +1,374 @@
+<title>Blossom Launch Book</title>
+<style>
+  :root {
+    --bg: #F6F1E7; --panel: #FDFBF7; --panel2: #EFE7D8;
+    --ink: #2B2A26; --soft: #5C594F; --head: #22382B;
+    --accent: #9C5F66; --pink: #D6A0A4; --pinklight: #EDD3CE;
+    --moss: #8A9480; --line: rgba(34,56,43,.18); --linesoft: rgba(34,56,43,.09);
+    --good: #4C7A5A; --warn: #A8722E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171E19; --panel: #1F2822; --panel2: #26312A;
+      --ink: #E9E3D5; --soft: #A7A193; --head: #DCE5DB;
+      --accent: #D8A3AA; --pink: #C08A90; --pinklight: #5A4548;
+      --moss: #93A088; --line: rgba(233,227,213,.22); --linesoft: rgba(233,227,213,.1);
+      --good: #8FC2A0; --warn: #D9A868;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #171E19; --panel: #1F2822; --panel2: #26312A;
+    --ink: #E9E3D5; --soft: #A7A193; --head: #DCE5DB;
+    --accent: #D8A3AA; --pink: #C08A90; --pinklight: #5A4548;
+    --moss: #93A088; --line: rgba(233,227,213,.22); --linesoft: rgba(233,227,213,.1);
+    --good: #8FC2A0; --warn: #D9A868;
+  }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Mulish", "Avenir Next", sans-serif;
+    font-size: 16.5px; line-height: 1.65; margin: 0; padding: 0 20px 90px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; color: var(--head); line-height: 1.1; text-wrap: balance; font-weight: 600; }
+  h1 { font-size: clamp(40px, 6vw, 58px); margin: 10px 0 8px; }
+  h2 { font-size: clamp(29px, 4vw, 38px); margin: 0 0 6px; }
+  h3 { font-size: 23px; margin: 22px 0 6px; }
+  p { max-width: 70ch; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+  .lede { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; color: var(--soft); max-width: 34em; }
+  .hero { text-align: center; padding: 52px 0 8px; }
+  .hero svg { width: 128px; height: auto; }
+  section { margin: 58px 0; }
+  .card { background: var(--panel); border: 1px solid var(--linesoft); border-radius: 4px; padding: 24px 26px; }
+  .grid { display: grid; gap: 16px; }
+  @media (min-width: 720px) { .g2 { grid-template-columns: 1fr 1fr; } .g3 { grid-template-columns: 1fr 1fr 1fr; } }
+  .stat { background: var(--panel); border: 1px solid var(--linesoft); border-top: 3px solid var(--pink); border-radius: 4px; padding: 18px 20px; }
+  .stat .big { font-family: "Cormorant Garamond", Georgia, serif; font-size: 40px; font-weight: 600; color: var(--head); line-height: 1; }
+  .stat .label { font-size: 13.5px; color: var(--soft); margin-top: 6px; }
+  details { border: 1px solid var(--linesoft); border-radius: 4px; background: var(--panel); margin: 10px 0; }
+  summary { cursor: pointer; padding: 14px 18px; font-weight: 700; color: var(--head); font-size: 15.5px; }
+  summary:hover { color: var(--accent); }
+  details > div { padding: 2px 20px 18px; border-top: 1px solid var(--linesoft); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--linesoft); border-radius: 4px; }
+  table { border-collapse: collapse; width: 100%; min-width: 700px; background: var(--panel); font-size: 14px; }
+  th { background: var(--head); color: var(--bg); text-align: left; padding: 10px 12px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+  td { padding: 10px 12px; border-top: 1px solid var(--linesoft); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: var(--panel2); }
+  .chip { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; margin: 3px 4px 3px 0; }
+  .chip.gap { background: var(--pinklight); color: var(--accent); }
+  .chip.ok { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
+  .chip.todo { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; font-weight: 600; }
+  .flow .step { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 8px 14px; }
+  .flow .arr { color: var(--accent); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sw { width: 116px; border-radius: 4px; overflow: hidden; border: 1px solid var(--linesoft); background: var(--panel); }
+  .sw .c { height: 56px; }
+  .sw .n { padding: 7px 10px; font-size: 12px; }
+  .sw .n strong { display: block; font-size: 12.5px; }
+  ul { padding-left: 1.2em; } li { margin-bottom: 6px; max-width: 68ch; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 28px; position: relative; }
+  .check li::before { content: "✓"; position: absolute; left: 0; color: var(--good); font-weight: 800; }
+  .req { list-style: none; padding-left: 0; }
+  .req li { padding-left: 28px; position: relative; }
+  .req li::before { content: "→"; position: absolute; left: 0; color: var(--warn); font-weight: 800; }
+  .divider { text-align: center; margin: 44px 0; color: var(--pink); font-size: 20px; letter-spacing: .6em; }
+  a { color: var(--accent); }
+  code { background: var(--panel2); padding: 2px 6px; border-radius: 3px; font-size: 13.5px; }
+  .note { font-size: 13.5px; color: var(--soft); }
+  .big-quote { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 27px; color: var(--head); border-left: 3px solid var(--pink); padding-left: 22px; max-width: 30em; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Mulish:wght@400;600;700&display=swap">
+
+<div class="wrap">
+
+  <header class="hero">
+    <svg viewBox="0 0 200 230" aria-hidden="true">
+      <g fill="none" stroke="#7C5A4A" stroke-linecap="round">
+        <path d="M126,212 C120,180 122,150 114,120 C108,100 100,88 88,78" stroke-width="10"/>
+        <path d="M126,212 C116,208 106,208 97,212" stroke-width="5"/>
+        <path d="M126,212 C136,207 146,207 155,211" stroke-width="5"/>
+        <path d="M113,118 C96,102 76,94 52,92" stroke-width="5.5"/>
+        <path d="M101,91 C104,74 112,60 128,50" stroke-width="4.5"/>
+        <path d="M118,142 C134,133 148,130 163,124" stroke-width="4"/>
+      </g>
+      <g fill="#D6A0A4"><circle cx="46" cy="80" r="8"/><circle cx="78" cy="66" r="9"/><circle cx="112" cy="44" r="8.5"/><circle cx="146" cy="44" r="7.5"/><circle cx="170" cy="110" r="8"/><circle cx="96" cy="80" r="6.5"/><circle cx="129" cy="64" r="6"/></g>
+      <g fill="#EDD3CE"><circle cx="33" cy="66" r="6.5"/><circle cx="62" cy="60" r="7"/><circle cx="95" cy="34" r="7"/><circle cx="131" cy="32" r="6"/><circle cx="160" cy="32" r="5.5"/><circle cx="178" cy="92" r="6"/><circle cx="152" cy="100" r="5.5"/></g>
+      <g fill="#B0767D"><circle cx="44" cy="56" r="5.5"/><circle cx="80" cy="44" r="6"/><circle cx="113" cy="24" r="5.5"/><circle cx="147" cy="22" r="5"/><circle cx="174" cy="74" r="6"/><circle cx="66" cy="80" r="5"/></g>
+    </svg>
+    <div class="eyebrow">Blossom Garden Design &amp; Project Management</div>
+    <h1>Blossom Launch Book</h1>
+    <p class="lede">Research, strategy, brand and a built, launch-ready website. Everything in one place, decisions first, detail folded away.</p>
+  </header>
+
+  <section>
+    <h2>The one-minute version</h2>
+    <div class="grid g3" style="margin: 18px 0;">
+      <div class="stat"><div class="big">18</div><div class="label">competitors researched across Surrey, Hampshire and Sussex, with sources for every claim</div></div>
+      <div class="stat"><div class="big">0</div><div class="label">of them sell independent, client-side project management as a standalone product. That is Blossom's lane.</div></div>
+      <div class="stat"><div class="big">17</div><div class="label">website pages built and working: copy, SEO, schema, forms, cookie consent, QR landing page</div></div>
+    </div>
+    <p class="big-quote">Every competitor is a designer who hands you to a builder, or a builder who designs. Nobody stands beside the client and runs the whole project. Blossom takes that seat.</p>
+    <p><strong>Core promise:</strong> A beautiful garden, properly delivered.</p>
+    <p><strong>What is needed from you before launch:</strong> the required inputs list at the bottom. Nothing was invented: no fake credentials, no fake testimonials, no fake photos.</p>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <section>
+    <div class="eyebrow">Phase 1</div>
+    <h2>Research: who is out there</h2>
+    <p>Method: live web research on 31 Aug 2026. Four parallel research passes: Surrey competitors, Hampshire and Sussex competitors, fee and pricing evidence, SEO and demand. Every claim was read on a live page. Where a price is not published, it says so. Full source files are saved in the project folder.</p>
+    <div class="tablewrap" style="margin-top: 14px;">
+      <table>
+        <thead><tr><th>Company</th><th>Territory</th><th>Positioning</th><th>Services</th><th>Price signals</th><th>CTA</th><th>Strengths</th><th>Exploitable gap</th></tr></thead>
+        <tbody>
+          <tr><td>Graduate Landscapes</td><td>Surrey, Hants, London</td><td>Premium design-and-build for estates</td><td>Design, build, maintenance</td><td>None</td><td>Arrange consultation</td><td>RHS Gold, BALI, ranks #1 Surrey</td><td>No pricing; PM only for own builds</td></tr>
+          <tr><td>Wild by Design</td><td>Dorking + 3 counties</td><td>Eco design-and-build</td><td>Design, build, maintain</td><td>Cost guide: £20k to £80k typical</td><td>Contact form</td><td>Best local SEO, 23 Google reviews</td><td>Eco brand; no independent PM</td></tr>
+          <tr><td>Simon Orchard</td><td>Petersfield + 4 counties</td><td>Personal premium designer</td><td>Design + optional monitoring</td><td>2019 blog only (15 to 20% small)</td><td>Send photos, 48h reply</td><td>Houzz 9 yrs, BBC feature</td><td>Handoff gap at build; no aftercare</td></tr>
+          <tr><td>We Love Plants</td><td>Surrey, Sussex</td><td>Horticulture-first premium</td><td>Design, planting, aftercare</td><td>None</td><td>Book a consultation</td><td>SGD, Chelsea awards, best FAQ</td><td>No pricing, no PM story</td></tr>
+          <tr><td>Raine Garden Design</td><td>Farnham, SE</td><td>Award-led boutique</td><td>Design, optional overseeing</td><td>None</td><td>Get started</td><td>APL Designer of Year 2024</td><td>No maintenance, thin objections</td></tr>
+          <tr><td>Bluefish Landscaping</td><td>Farnham, Surrey</td><td>Contractor-led design-build</td><td>Design, build, maintain</td><td>None</td><td>Call Farnham</td><td>BALI Award 2024, since 2007</td><td>Contractor DNA, less aspirational</td></tr>
+          <tr><td>Matthew Childs</td><td>Reigate, national</td><td>Top-tier studio</td><td>3 named design stages, JCLI admin</td><td>None</td><td>Contact</td><td>Chelsea 2024, H&amp;G Top 50</td><td>National focus, weak town SEO</td></tr>
+          <tr><td>Claire Merriman</td><td>Guildford</td><td>Approachable full service</td><td>Design to managed build</td><td>Consult £495 to £895 +VAT</td><td>Paid consultation</td><td>Holds the PM keyword</td><td>Thin site, near-zero trust signals</td></tr>
+          <tr><td>Ann-Marie Powell</td><td>Petersfield, national</td><td>Celebrity studio</td><td>Design tiers</td><td>Consults £800 / £1,500; design £3k / £5.5k</td><td>Get in touch</td><td>SGD Fellow, H&amp;G Top 50</td><td>Entry price walls off mid-market</td></tr>
+          <tr><td>Helyers of Hampshire</td><td>Hampshire-wide</td><td>Volume design-and-build</td><td>2D/3D design, build</td><td>Free consultation</td><td>Free site visit, WhatsApp</td><td>Town-page SEO machine</td><td>Trade-brand feel, no credentials</td></tr>
+          <tr><td>Stuart Charles Towner</td><td>Hampshire, UK</td><td>Design-led premium</td><td>4 named stages</td><td>None</td><td>Contact</td><td>SGD, RHS Gold medals</td><td>Digitally passive, no entry offer</td></tr>
+          <tr><td>Adam Vetere</td><td>Winchester</td><td>Owner-designer</td><td>Design, informal PM via contractors</td><td>Budgets £20k to £250k anchor</td><td>Tell us about it</td><td>Best of Houzz 2025, testimonials</td><td>One-man capacity, thin maintenance</td></tr>
+          <tr><td>Acres Wild</td><td>Horsham, SE</td><td>Country-garden masterplanners</td><td>7-stage SGD process</td><td>None</td><td>Contact us</td><td>Since 1988, SGD Grand Award</td><td>Static site, monitoring not PM</td></tr>
+          <tr><td>Your Garden Design</td><td>Chichester</td><td>Award-led bespoke</td><td>Design / softscape / build / maintain</td><td>None</td><td>None visible</td><td>Cleanest packaging in Sussex</td><td>No CTAs, beatable on search</td></tr>
+          <tr><td>Nigel L Philips</td><td>Lewes, Sussex coast</td><td>Veteran designer</td><td>Bespoke + design-in-a-day</td><td>£450 / £750 / £1,500 day options</td><td>Call Nigel</td><td>SGD Fellow, published prices</td><td>Dated site, no build or PM</td></tr>
+          <tr><td>Alex Bell</td><td>Steyning, 5 counties</td><td>Plant-rich bespoke</td><td>Design, planting</td><td>None</td><td>Email/phone</td><td>30 years claimed</td><td>Claims without proof, no process</td></tr>
+          <tr><td>Openview (Kent)</td><td>Kent, Sussex, Surrey</td><td>Closest PM adjacent</td><td>PM of other contractors' builds</td><td>None</td><td>Contact</td><td>Genuinely independent PM</td><td>Dated site, weak in our counties</td></tr>
+          <tr><td>Upcher &amp; Co</td><td>Southampton, Hants</td><td>Independent design + PM</td><td>Consultancy, PM</td><td>None</td><td>Contact</td><td>Independent model exists</td><td>Dated site, no town presence</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details>
+      <summary>Fee and pricing evidence (what the market actually charges)</summary>
+      <div>
+        <ul>
+          <li><strong>SGD official guidance (Rev. 2025):</strong> design fees as a percentage of build cost, sliding from about 21% at £30k to about 8 to 10% at £100k+. Stage split 25 / 40 / 10 / 25. Site supervision is an hourly "other service", which is exactly the gap Blossom productises.</li>
+          <li><strong>Published designer fees:</strong> London Garden Designer, consult £195 +VAT refundable, design 10 to 15% from £3,250. Kristina Clode (Sussex), build £250 to £450 per sq m, design 10 to 15%. DP Garden Design (Alresford), 10% worked example, PM billed hourly. Nigel Philips, design days £450 to £1,500. Ann-Marie Powell, £3,000 and £5,500 design tiers.</li>
+          <li><strong>Consultation conventions:</strong> premium practices charge roughly £195 to £895 and redeem it against fees; free consultations signal the volume end.</li>
+          <li><strong>Homeowner pain (documented):</strong> Trading Standards prosecutions and forum threads show the repeat failure modes: defects owners cannot judge, underquoting then corner-cutting, abandonment, no one holding payment milestones.</li>
+          <li><strong>Seasonality:</strong> enquiries peak in spring; the trade itself promotes autumn and winter as the planning and building season; six to twelve months from first meeting to finished garden.</li>
+        </ul>
+        <p class="note">Full citations in <code>research/fees-pricing-pm-evidence.md</code>, <code>research/competitive-research.md</code> and <code>research/seo-landscape.md</code> in the project folder.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <div class="eyebrow">Phase 1 → 2</div>
+    <h2>The gaps, and the position they point to</h2>
+    <p>Five things nobody in the three counties does:</p>
+    <p>
+      <span class="chip gap">1 · Independent client-side project management</span>
+      <span class="chip gap">2 · Published, packaged pricing</span>
+      <span class="chip gap">3 · A named year-round care programme</span>
+      <span class="chip gap">4 · Serious objection-handling and FAQ</span>
+      <span class="chip gap">5 · Premium brand + town-level SEO together</span>
+    </p>
+    <div class="card" style="margin-top: 14px;">
+      <h3 style="margin-top: 0;">Recommended position: the accountable lead</h3>
+      <p>Blossom is the practice that stands on the client's side of the whole project. We design gardens that can actually be built, and we manage the build so they get built well. Design and delivery can be bought together or separately, and the delivery half has no credible local competitor.</p>
+      <p style="margin-bottom: 0;"><strong>Why it wins:</strong> the whitespace is real (verified), the pain is documented (verified), the pricing transparency that supports it is almost unused locally (verified), and it produces revenue in every season.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Phase 2</div>
+    <h2>Proposition and service architecture</h2>
+    <div class="flow" style="margin: 16px 0;">
+      <span class="step">Consultation £295</span><span class="arr">→</span>
+      <span class="step">Garden Design</span><span class="arr">→</span>
+      <span class="step">Independent PM</span><span class="arr">→</span>
+      <span class="step">Complete Transformation</span><span class="arr">→</span>
+      <span class="step">The Garden Year</span>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Service</th><th>What it is</th><th>Guide price (recommendation)</th><th>Evidence base</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Garden Consultation</strong></td><td>90 minutes at home + written options summary. The universal entry point.</td><td>£295, redeemed in full</td><td>Premium convention £195 to £895, redeemable</td></tr>
+          <tr><td><strong>Garden Design</strong> (design only)</td><td>Masterplan, construction drawings, planting design. Also renovation plans and design reviews.</td><td>10 to 15% of build budget, from ~£3,500</td><td>SGD scale + regional published fees</td></tr>
+          <tr><td><strong>Independent Project Management</strong> (management only)</td><td>Tender, contracts, weekly inspections, staged payments, snagging. Any designer, any landscaper.</td><td>From £950/month or ~10% of build</td><td>Whitespace; scope anchored to SGD Stage F</td></tr>
+          <tr><td><strong>Complete Garden Transformation</strong></td><td>All of it, one accountable lead, consultation to handover.</td><td>Most projects £30k to £80k all-in</td><td>Wild by Design guide, regional anchors</td></tr>
+          <tr><td><strong>The Garden Year</strong></td><td>Four seasonal visits, written garden calendar, care oversight. The year-round revenue line.</td><td>From £650/year or £180/visit</td><td>Whitespace; Wild by Design proves premium recurring works</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top: 10px;"><strong>Pricing verdict: publish guide pricing.</strong> Almost nobody local does; it pre-qualifies affluent clients, feeds the cost-guide SEO play, and every band above is defensible from evidence. All figures are commercial recommendations and need your sign-off; the site labels every one "as a guide, confirmed in writing".</p>
+    <details>
+      <summary>Customer segments and buying situations</summary>
+      <div>
+        <ul>
+          <li><strong>Overwhelmed dreamers.</strong> Want change, don't know where to start. Entry: consultation.</li>
+          <li><strong>Design-ready, delivery-anxious.</strong> Have drawings or a designer, fear the build. Entry: independent PM. The unserved segment.</li>
+          <li><strong>Time-poor professionals and families.</strong> Want one number to call. Entry: complete transformation.</li>
+          <li><strong>New movers.</strong> House right, garden wrong. Entry: consultation or complete.</li>
+          <li><strong>Post-renovation households.</strong> Builders gone, garden wrecked. Entry: design or complete.</li>
+          <li><strong>Established garden owners.</strong> Renewal and stewardship. Entry: The Garden Year or planting design.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <section>
+    <div class="eyebrow">Phase 3 + 4</div>
+    <h2>The website: built and working</h2>
+    <p>Static site, no frameworks, fast by construction. Running locally now at <code>localhost:8901</code>; deployable to any static host. Full copy written in British English, no em dashes, no clichés, nothing invented.</p>
+    <div class="flow" style="margin: 14px 0;">
+      <span class="step">Advert / search / referral</span><span class="arr">→</span>
+      <span class="step">Relevant page</span><span class="arr">→</span>
+      <span class="step">Instant understanding</span><span class="arr">→</span>
+      <span class="step">Evidence + FAQ</span><span class="arr">→</span>
+      <span class="step">Book a consultation</span>
+    </div>
+    <details open>
+      <summary>Sitemap: 17 pages, every one written and built</summary>
+      <div>
+        <ul style="columns: 2; column-gap: 40px;">
+          <li>Home</li>
+          <li>Garden Design</li>
+          <li>Project Management</li>
+          <li>Complete Garden Transformation</li>
+          <li>The Garden Year</li>
+          <li>How It Works (with fee table)</li>
+          <li>FAQ (14 questions, schema-ready)</li>
+          <li>Projects (honest placeholders)</li>
+          <li>About (founder slot ready)</li>
+          <li>Areas We Cover (real county content)</li>
+          <li>Garden Journal (12-topic plan)</li>
+          <li>Article: Why autumn is the best time</li>
+          <li>Contact + Book a Consultation</li>
+          <li>QR campaign landing (/welcome)</li>
+          <li>Thank-you page</li>
+          <li>Privacy + Cookies + Terms</li>
+          <li>sitemap.xml + robots.txt</li>
+        </ul>
+        <p class="note">Town pages deliberately not built yet: the research says thin location pages are a weakness, not a strength. They come later, one per town, each anchored to a real local project.</p>
+      </div>
+    </details>
+    <details>
+      <summary>SEO: keyword map, metadata, schema, local plan</summary>
+      <div>
+        <div class="tablewrap" style="margin: 10px 0;">
+          <table>
+            <thead><tr><th>Page</th><th>Primary keyword target</th><th>Angle</th></tr></thead>
+            <tbody>
+              <tr><td>Home</td><td>garden design and project management surrey hampshire sussex</td><td>Brand + category</td></tr>
+              <tr><td>Garden Design</td><td>garden designer surrey / hampshire / sussex</td><td>Compete on quality + planting design gap</td></tr>
+              <tr><td>Project Management</td><td>garden project management, who manages a garden build</td><td>Own the whitespace question space</td></tr>
+              <tr><td>Complete Transformation</td><td>garden design and build (design-led), garden renovation</td><td>Design-led alternative to build firms</td></tr>
+              <tr><td>FAQ</td><td>how much does a garden designer cost, designer vs landscaper</td><td>Only local FAQ of substance</td></tr>
+              <tr><td>Areas</td><td>county + town terms</td><td>Feeds future town pages</td></tr>
+              <tr><td>Journal article</td><td>best time of year to design a garden</td><td>Proven winter-planning genre</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>Done in the build:</strong> unique titles and descriptions on all pages, single H1 per page, LocalBusiness schema everywhere, Service schema on 4 service pages, FAQPage schema on the FAQ, Article schema on the journal piece, alt text on all imagery, internal links between every service and the FAQ, sitemap.xml, robots.txt (welcome and thanks pages noindexed).</li>
+          <li><strong>Google Business Profile (needs real address + phone):</strong> category Garden Designer, secondary Landscape Designer; service areas set to the three counties; photos from first projects; weekly posts from the Journal.</li>
+          <li><strong>Citations and reviews:</strong> Houzz profile first (directory pages rank page 1 for six target towns), then SGD/APL membership listings when membership is confirmed, Book a Builder, Rated People, county directories. Ask every consultation client for a Google review; review velocity beats volume.</li>
+          <li><strong>Editorial plan:</strong> 12 topics scheduled by season on the Journal page, mapped to the demand calendar: demand-capture in spring, demand-creation in autumn and winter. The October piece is the local cost guide, the November piece is the "who manages a garden build" guide; both target the two biggest content gaps found in research.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Conversion and measurement: forms, events, consent</summary>
+      <div>
+        <ul>
+          <li><strong>Persistent CTA:</strong> Book a consultation in the header of every page, repeated in every page's closing band.</li>
+          <li><strong>Enquiry form:</strong> name, email, phone (optional), town, need, budget band (optional), timing, message (optional), consent tick. Short enough to finish, rich enough to qualify. QR landing uses an even shorter four-field version.</li>
+          <li><strong>Analytics spec (GA4, consent-gated):</strong> <code>generate_lead</code> on form submit with project type and budget, <code>book_consultation_click</code> on every CTA, <code>phone_call_click</code> on tel links. UTM parameters persist across the visit and land in hidden form fields, so every enquiry carries its source.</li>
+          <li><strong>QR attribution:</strong> print QR points to <code>/welcome.html?utm_source=print&amp;utm_medium=qr&amp;utm_campaign=local-launch-2026&amp;utm_content=[publication]</code>. One URL per publication, so each advert reports its own enquiries.</li>
+          <li><strong>Cookie consent:</strong> UK-appropriate: analytics loads only after an explicit accept, an "essential only" choice is equally prominent, and the choice is remembered.</li>
+          <li><strong>Accessibility and performance:</strong> skip links, focus states, aria labels, one h1 per page, reduced-motion respected, warm-contrast palette at AA or better, system-light static files with two font families and SVG illustration only. No frameworks, no trackers by default.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <div class="eyebrow">Phase 5</div>
+    <h2>Identity: the tree, grown up</h2>
+    <p>The bright green and pink logo has been redrawn as a stylised botanical illustration: charcoal-bark trunk, dusty pink blossom in three tones, falling petals for movement. Same tree, better tailoring. It now runs through everything as a system: the mark, a branch device, petal bullets, a blossom divider, the seasonal ring and the drawn masterplan.</p>
+    <div class="swatches" style="margin: 16px 0;">
+      <div class="sw"><div class="c" style="background:#F6F1E7;"></div><div class="n"><strong>Parchment</strong>#F6F1E7 · ground</div></div>
+      <div class="sw"><div class="c" style="background:#22382B;"></div><div class="n"><strong>Yew</strong>#22382B · headings, buttons</div></div>
+      <div class="sw"><div class="c" style="background:#2B2A26;"></div><div class="n"><strong>Ink</strong>#2B2A26 · body text</div></div>
+      <div class="sw"><div class="c" style="background:#D6A0A4;"></div><div class="n"><strong>Blossom</strong>#D6A0A4 · accent</div></div>
+      <div class="sw"><div class="c" style="background:#9C5F66;"></div><div class="n"><strong>Rosewood</strong>#9C5F66 · links, deep accent</div></div>
+      <div class="sw"><div class="c" style="background:#8A9480;"></div><div class="n"><strong>Moss</strong>#8A9480 · planting, support</div></div>
+    </div>
+    <ul>
+      <li><strong>Type:</strong> Cormorant Garamond for display and pull quotes, Mulish for everything functional, letter-spaced small caps for eyebrows. Editorial standfirsts in serif italic, the magazine device.</li>
+      <li><strong>The deliberate risk:</strong> no stock photography anywhere. The imagery is what a design practice really produces: the drawn masterplan, the planting palette, the blossom system. Photo slots are structured and wait for real projects, so nothing fake ever ships and the site still looks finished today.</li>
+      <li><strong>Motion:</strong> six slow drifting petals on hero sections and a single gentle scroll reveal. Nothing else moves. Calm is the brand.</li>
+    </ul>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <section>
+    <div class="eyebrow">Before launch</div>
+    <h2>Required inputs (nothing here was invented)</h2>
+    <ul class="req">
+      <li><strong>Founder details:</strong> name, background, photo, qualifications, memberships, insurance. Slots ready on About.</li>
+      <li><strong>Contact details:</strong> phone, email, business address, legal entity name and company number (site, footer, legal pages, schema, GBP).</li>
+      <li><strong>Domain:</strong> canonical URLs currently use <code>blossomgardendesign.co.uk</code> as a placeholder; confirm and update in one file (<code>_build/templates.py</code>), then rebuild.</li>
+      <li><strong>Pricing sign-off:</strong> every guide figure above.</li>
+      <li><strong>Form endpoint:</strong> a Formspree (or similar) URL replaces <code>REPLACE_WITH_FORM_ENDPOINT</code> in two forms. Until then forms demo the journey to the thank-you page.</li>
+      <li><strong>GA4 ID:</strong> one line in <code>assets/js/main.js</code>.</li>
+      <li><strong>Project photography and testimonials:</strong> as real projects complete. Optional: a Calendly link for direct diary booking.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Launch checklist</h2>
+    <ul class="check">
+      <li>Site built: 17 pages, copy, SEO, schema, sitemap, robots, consent, forms, QR landing</li>
+      <li>Identity system: evolved mark, light/dark variants, dividers, masterplan, palette, seasonal ring</li>
+      <li>Automated QA passed: no em dashes, no broken internal links, no missing assets, desktop visual QA in Chrome</li>
+    </ul>
+    <ul class="req">
+      <li>Fill required inputs above, rebuild (<code>python3 _build/build.py</code>), deploy to static host, connect domain, HTTPS on</li>
+      <li>Google Search Console: verify, submit sitemap. Google Business Profile: create with real address</li>
+      <li>Test the form end to end with the live endpoint; test QR codes from each printed advert; check GA4 events fire after consent</li>
+      <li>Legal pages: confirm entity details and have them read once by a professional</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The first 90 days</h2>
+    <h3>Month 1: exist properly</h3>
+    <ul>
+      <li>Deploy site, GBP live, Houzz profile, first citations. Begin SGD or APL membership application if not already held.</li>
+      <li>First QR print advert in one or two local titles (Surrey and Hampshire editions), each with its own UTM content tag so the numbers settle the argument.</li>
+      <li>Ask every early contact for a Google review after the consultation. Publish the autumn article (done) and share it locally: Nextdoor, village magazines, local Facebook groups.</li>
+    </ul>
+    <h3>Month 2: own the questions</h3>
+    <ul>
+      <li>Publish the local cost guide and the "who manages a garden build" guide, the two proven content gaps.</li>
+      <li>Partnership outreach: landscapers who want well-specified jobs, architects mid-renovation, premium estate agents. Blossom brings them work; they bring referrals back.</li>
+      <li>Winter campaign message everywhere: design now, build in the quiet season, ready for summer.</li>
+    </ul>
+    <h3>Month 3: prove it</h3>
+    <ul>
+      <li>First case study live, even if it is a consultation-to-design story rather than a finished build. Photograph everything from day one.</li>
+      <li>Build the first two town pages only where a real project anchors them (research order: Alresford, Romsey, Farnham, Godalming, Cobham, Esher, Haywards Heath).</li>
+      <li>Review QR and GA4 data: which advert, which pages, which enquiry types. Double down where the enquiries came from, cut what stayed silent.</li>
+    </ul>
+  </section>
+
+  <footer style="text-align:center; margin-top: 70px;">
+    <div class="divider" style="margin: 20px 0;">❀</div>
+    <p class="note">Blossom Launch Book · research and build 31 Aug 2026 · project folder: Documents/Claude/Projects/Blossom<br>All guide prices are commercial recommendations pending sign-off. All research claims carry source URLs in the research files.</p>
+  </footer>
+
+</div>

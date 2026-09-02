@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blossom Palette Builder</title>
+<link rel="icon" type="image/png" href="logo-tree.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #FFFBF2; color: #33261C; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15.5px; line-height: 1.6; padding-bottom: 110px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  h1, h2 { font-family: "Fraunces", serif; font-weight: 700; line-height: 1.08; color: #33261C; margin: 0 0 8px; }
+  h1 { font-size: clamp(32px, 4.5vw, 46px); }
+  h2 { font-size: 22px; margin-top: 26px; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; color: #CC428A; }
+  .muted { color: #6B5D50; max-width: 76ch; }
+  .board-head { padding: 40px 0 6px; }
+  a { color: #B23578; }
+
+  /* ---------- Roles ---------- */
+  #roles { position: sticky; top: 0; z-index: 60; background: rgba(255,251,242,.96); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(51,38,28,.14); padding: 12px 0; margin-top: 18px; }
+  #roles .wrap { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  #roles .lbl { font-size: 12.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #6B5D50; margin-right: 4px; }
+  .role {
+    display: inline-flex; align-items: center; gap: 9px;
+    border: 2px solid rgba(51,38,28,.18); border-radius: 24px;
+    background: #FFFDF7; padding: 8px 16px; cursor: pointer;
+    font: inherit; font-weight: 700; font-size: 13.5px; color: #33261C;
+  }
+  .role .dot { width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); }
+  .role.active { border-color: #CC428A; box-shadow: 0 0 0 3px rgba(204,66,138,.18); }
+  .role .hex { font-size: 11px; font-weight: 600; color: #6B5D50; }
+
+  /* ---------- Preview ---------- */
+  #preview { border: 1px solid rgba(51,38,28,.18); border-radius: 12px; overflow: hidden; margin: 20px 0 10px; box-shadow: 0 10px 30px rgba(51,38,28,.1); }
+  #contrast { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0 4px; }
+  .cx { font-size: 12.5px; font-weight: 700; padding: 5px 12px; border-radius: 14px; }
+  .cx.pass { background: #E4EFDD; color: #2E5A36; }
+  .cx.warn { background: #F6E3C8; color: #8A5A1B; }
+  .cx.fail { background: #F6D5D2; color: #97302A; }
+
+  /* ---------- Library ---------- */
+  .fam { margin-top: 26px; }
+  .fam h2 { font-size: 19px; margin: 0 0 10px; }
+  .sw-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); }
+  .sw {
+    position: relative; border: 2px solid rgba(51,38,28,.14); border-radius: 10px;
+    background: #FFFDF7; padding: 8px; cursor: pointer; transition: transform .12s, border-color .12s;
+  }
+  .sw:hover { transform: translateY(-2px); border-color: rgba(204,66,138,.55); }
+  .sw .c { height: 52px; border-radius: 6px; border: 1px solid rgba(0,0,0,.08); }
+  .sw .n { font-size: 12px; font-weight: 700; margin-top: 7px; line-height: 1.25; }
+  .sw .h { font-size: 11px; color: #6B5D50; font-weight: 600; }
+  .sw .tags { position: absolute; top: 3px; right: 5px; display: flex; gap: 3px; }
+  .sw .tag { font-size: 9px; font-weight: 800; color: #fff; background: #CC428A; border-radius: 8px; padding: 2px 6px; letter-spacing: .05em; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+
+  #custom { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+  #custom input[type="text"] { font: inherit; padding: 9px 12px; border: 1.5px solid rgba(51,38,28,.25); border-radius: 8px; width: 130px; }
+  #custom input[type="color"] { width: 46px; height: 40px; border: none; background: none; cursor: pointer; }
+  #custom button { font: inherit; font-weight: 700; background: #2E4A33; color: #FFFBF2; border: 0; border-radius: 8px; padding: 10px 18px; cursor: pointer; }
+
+  /* ---------- Bottom bar ---------- */
+  #bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: #22382B; color: #FFFBF2; padding: 12px 18px;
+    display: flex; gap: 14px; align-items: center; justify-content: center; flex-wrap: wrap;
+    font-size: 13px; font-weight: 600;
+  }
+  #bar .mini { display: flex; align-items: center; gap: 6px; }
+  #bar .mini .d { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); }
+  #bar .mini .x { color: #F0B7D3; font-weight: 800; }
+  #bar button { background: #FFFBF2; color: #22382B; border: 0; border-radius: 6px; font: inherit; font-weight: 700; padding: 7px 14px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="wrap board-head">
+  <span class="eyebrow">Blossom · palette builder</span>
+  <h1>Build your own palette, colour by colour</h1>
+  <p class="muted">Every colour is separate now. Pick a <strong>role</strong> below, then click any swatch to put that colour in the role. The preview and the readability checks update instantly, using your locked choices (underline CTA, current headline, tight lux type). Your palette saves in this browser; read me the five hex codes from the green bar when you are happy. <a href="index.html">Back to the design chooser</a> · <a href="wireframe.html">the scroll wireframe</a></p>
+</div>
+
+<div id="roles">
+  <div class="wrap">
+    <span class="lbl">Now choosing:</span>
+    <button class="role" data-role="bg"><span class="dot"></span>Background<span class="hex"></span></button>
+    <button class="role" data-role="ink"><span class="dot"></span>Ink, headings &amp; text<span class="hex"></span></button>
+    <button class="role" data-role="primary"><span class="dot"></span>Buttons &amp; footer<span class="hex"></span></button>
+    <button class="role" data-role="accent"><span class="dot"></span>Accent &amp; links<span class="hex"></span></button>
+    <button class="role" data-role="tint"><span class="dot"></span>Soft tint panels<span class="hex"></span></button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div id="preview"></div>
+  <div id="contrast"></div>
+  <div id="library"></div>
+
+  <div id="custom">
+    <strong>Add your own colour:</strong>
+    <input type="color" id="cust-pick" value="#88AA66">
+    <input type="text" id="cust-hex" placeholder="#88AA66" spellcheck="false">
+    <button id="cust-add">Add to library</button>
+  </div>
+</div>
+
+<div id="bar"></div>
+
+<script>
+/* ---------------- Swatch library ---------------- */
+const FAMILIES = [
+ ["Creams and grounds", [
+   ["Logo Cream","#FFFBF2"],["Warm White","#FFFCF5"],["Ivory Deep","#F8F0DF"],["Sand","#FAF0E1"],
+   ["Meadow Cream","#FDFBF0"],["Chalk","#FBFAF4"],["Pale Sage","#EFF2E6"],["Pale Lilac","#F3EFF4"],
+   ["Night Garden","#1B241D"],["Deep Moss","#243026"]]],
+ ["Deep greens", [
+   ["Leaf Green","#2E4A33"],["Yew","#22382B"],["Meadow Green","#3E6B3E"],["Slate Green","#51684F"],
+   ["Olive","#667A4E"],["Conifer","#54614A"],["Moss Mid","#7C9163"]]],
+ ["Soft greens and limes", [
+   ["Sage","#AEBB9E"],["Soft Moss","#8A9480"],["Lichen","#B9C2A8"],["Leaf Lime","#AFCE50"],["Olive Lime","#7E9A2E"]]],
+ ["Inks and barks", [
+   ["Bark Ink","#33261C"],["Logo Bark","#371C11"],["Espresso","#26201B"],["Char","#211C17"],
+   ["Slate Ink","#2C3947"],["Plum Ink","#3A2740"]]],
+ ["Pinks and magentas", [
+   ["Logo Magenta","#CC428A"],["Deep Magenta","#B23578"],["Berry","#8F2A60"],["Soft Pink","#CC7EA7"],
+   ["Dusk Pink","#E06AA8"],["Rose","#C77E9E"],["Orchid","#C75B93"],["Petal","#E4A8C8"]]],
+ ["Blues and flints", [
+   ["Majolica Blue","#2C5E9E"],["Flint","#46586B"],["Steel","#5F7285"],["Hazy Sky","#B9C8D6"]]],
+ ["Golds and terracottas", [
+   ["Gorse","#C9A227"],["Buttercup","#D9A420"],["Straw","#C9AC7A"],["Terracotta","#C4764F"],
+   ["Clay","#B95C38"],["Amber","#A8722E"]]],
+ ["Plums and lavenders", [
+   ["Deep Plum","#4A2D4E"],["Mauve","#8B7A96"],["Heather","#6E5F7A"]]],
+ ["Soft tints", [
+   ["Petal Tint","#F7E0EC"],["Shell","#F4E3D7"],["Lime Wash","#EDF3D4"],["Rose Wash","#F1DEE8"],
+   ["Orchid Wash","#F2DEEA"],["Gorse Wash","#F3EBCF"],["Olive Wash","#E8ECD6"],["Butter Wash","#F7EDCB"],["Sage Wash","#E4EAD8"]]]
+];
+
+const ROLE_NAMES = { bg:"Background", ink:"Ink", primary:"Buttons", accent:"Accent", tint:"Tint" };
+const ROLE_SHORT = { bg:"BG", ink:"INK", primary:"BTN", accent:"ACC", tint:"TINT" };
+
+let palette = { bg:"#FFFBF2", ink:"#33261C", primary:"#2E4A33", accent:"#CC428A", tint:"#F7E0EC" };
+let activeRole = "bg";
+let customs = [];
+try {
+  const s = localStorage.getItem("blossom-custom-palette"); if (s) palette = {...palette, ...JSON.parse(s)};
+  const c = localStorage.getItem("blossom-custom-swatches"); if (c) customs = JSON.parse(c);
+} catch(e){}
+
+function save(){ try{
+  localStorage.setItem("blossom-custom-palette", JSON.stringify(palette));
+  localStorage.setItem("blossom-custom-swatches", JSON.stringify(customs));
+}catch(e){} }
+
+/* ---------------- Colour maths ---------------- */
+function hexToRgb(h){ h=h.replace("#",""); return [0,2,4].map(i=>parseInt(h.substr(i,2),16)); }
+function lum(hex){ const [r,g,b]=hexToRgb(hex).map(v=>{v/=255; return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);}); return .2126*r+.7152*g+.0722*b; }
+function ratio(a,b){ const l1=lum(a), l2=lum(b); return (Math.max(l1,l2)+.05)/(Math.min(l1,l2)+.05); }
+function onColour(hex){ return lum(hex) > 0.45 ? palette.ink : "#FFFBF2"; }
+function softInk(){ const [r,g,b]=hexToRgb(palette.ink); const [br,bg2,bb]=hexToRgb(palette.bg);
+  return `rgb(${Math.round(r*.78+br*.22)},${Math.round(g*.78+bg2*.22)},${Math.round(b*.78+bb*.22)})`; }
+
+/* ---------------- Preview ---------------- */
+function renderPreview(){
+  const p = palette, onP = onColour(p.primary), tintInk = lum(p.tint) > 0.45 ? (lum(p.accent)<0.4?p.accent:p.ink) : "#FFFBF2";
+  document.getElementById("preview").innerHTML = `
+  <div style="background:${p.bg};">
+    <div style="display:flex;align-items:center;gap:20px;padding:13px 26px;border-bottom:1px solid rgba(0,0,0,.09);color:${p.ink};font-size:13.5px;font-weight:600;">
+      <span style="font-family:Fraunces,serif;font-weight:700;font-size:19px;color:${p.accent};display:flex;align-items:center;gap:8px;margin-right:auto;"><img src="logo-tree.png" alt="" style="height:30px;">Blossom</span>
+      <span>Garden Design</span><span>Project Management</span>
+      <span style="background:${p.primary};color:${onP};padding:9px 18px;border-radius:4px;font-weight:700;">Book a consultation</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;padding:clamp(24px,4vw,46px);">
+      <div>
+        <span style="display:block;font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${p.accent};margin-bottom:12px;">Surrey · Hampshire · Sussex</span>
+        <h3 style="font-family:Fraunces,serif;font-optical-sizing:auto;font-size:clamp(30px,3.6vw,52px);font-weight:700;letter-spacing:-0.015em;line-height:1.02;color:${p.ink};margin:0 0 14px;">A beautiful garden, properly delivered.</h3>
+        <p style="font-size:16px;line-height:1.65;color:${softInk()};max-width:52ch;margin:0 0 18px;">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get.</p>
+        <a style="display:inline-flex;gap:8px;font-weight:700;font-size:16px;color:${p.accent};border-bottom:2px solid ${p.accent};padding:3px 2px;text-decoration:none;">Book a consultation →</a>
+        <div style="background:${p.tint};border-radius:10px;padding:14px 18px;max-width:30em;margin-top:22px;">
+          <span style="font-size:13.5px;font-weight:600;color:${tintInk};">Every route starts with a £295 consultation, redeemed in full against any further work.</span>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;height:280px;"><img src="country-garden.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    </div>
+    <div style="background:${p.primary};color:${onP};padding:14px 26px;font-size:13px;font-weight:600;display:flex;gap:22px;flex-wrap:wrap;">
+      <span>© Blossom Garden Design &amp; Project Management</span><span>Privacy</span><span>Cookies</span>
+    </div>
+  </div>`;
+
+  const checks = [
+    ["Text on background", ratio(palette.ink, palette.bg), 4.5],
+    ["Button label on button", ratio(onColour(palette.primary), palette.primary), 4.5],
+    ["Accent links on background", ratio(palette.accent, palette.bg), 3],
+    ["Button vs background (visible edge)", ratio(palette.primary, palette.bg), 1.6]
+  ];
+  document.getElementById("contrast").innerHTML = checks.map(([n,r,min])=>{
+    const cls = r >= min ? "pass" : (r >= min*0.75 ? "warn" : "fail");
+    const word = cls==="pass" ? "fine" : (cls==="warn" ? "borderline" : "hard to read");
+    return `<span class="cx ${cls}">${n}: ${r.toFixed(1)}:1 · ${word}</span>`;
+  }).join("");
+}
+
+/* ---------------- Roles / library / bar ---------------- */
+function renderRoles(){
+  document.querySelectorAll(".role").forEach(btn=>{
+    const r = btn.dataset.role;
+    btn.classList.toggle("active", r === activeRole);
+    btn.querySelector(".dot").style.background = palette[r];
+    btn.querySelector(".hex").textContent = palette[r];
+  });
+}
+function swatchHTML(name, hex){
+  const tags = Object.keys(palette).filter(r => palette[r].toUpperCase() === hex.toUpperCase())
+    .map(r => `<span class="tag">${ROLE_SHORT[r]}</span>`).join("");
+  return `<div class="sw" data-hex="${hex}"><div class="tags">${tags}</div>
+    <div class="c" style="background:${hex};"></div><div class="n">${name}</div><div class="h">${hex}</div></div>`;
+}
+function renderLibrary(){
+  let html = FAMILIES.map(([fam, list]) =>
+    `<div class="fam"><h2>${fam}</h2><div class="sw-grid">${list.map(s=>swatchHTML(s[0],s[1])).join("")}</div></div>`).join("");
+  if (customs.length) html += `<div class="fam"><h2>Your own colours</h2><div class="sw-grid">${customs.map(h=>swatchHTML("Custom",h)).join("")}</div></div>`;
+  document.getElementById("library").innerHTML = html;
+}
+function renderBar(){
+  const minis = Object.keys(palette).map(r =>
+    `<span class="mini"><span class="d" style="background:${palette[r]};"></span>${ROLE_SHORT[r]} <span class="x">${palette[r]}</span></span>`).join("");
+  document.getElementById("bar").innerHTML = `<span>Your palette:</span>${minis}
+    <button onclick="resetPalette()">Reset</button>`;
+}
+function renderAll(){ renderRoles(); renderPreview(); renderLibrary(); renderBar(); }
+function resetPalette(){ palette = { bg:"#FFFBF2", ink:"#33261C", primary:"#2E4A33", accent:"#CC428A", tint:"#F7E0EC" }; save(); renderAll(); }
+
+document.addEventListener("click", e => {
+  const role = e.target.closest(".role");
+  if (role){ activeRole = role.dataset.role; renderRoles(); return; }
+  const sw = e.target.closest(".sw");
+  if (sw){ palette[activeRole] = sw.dataset.hex; save(); renderAll(); }
+});
+
+/* custom colours */
+const pick = document.getElementById("cust-pick"), hexIn = document.getElementById("cust-hex");
+pick.addEventListener("input", ()=> hexIn.value = pick.value.toUpperCase());
+document.getElementById("cust-add").addEventListener("click", ()=>{
+  let h = (hexIn.value || pick.value).trim().toUpperCase();
+  if (!h.startsWith("#")) h = "#"+h;
+  if (!/^#[0-9A-F]{6}$/.test(h)) { hexIn.value = "check hex"; return; }
+  if (!customs.includes(h)) customs.push(h);
+  palette[activeRole] = h; save(); renderAll();
+});
+
+renderAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,909 @@
+BLOSSOM · COMPLETE GARDEN MANAGEMENT
+FULL WEBSITE COPY DECK · AS BUILT (V2 POSITIONING)
+Extracted from the live build on 01 September 2026
+
+Implements the Version 2 copy deck: complete garden management positioning,
+five customer-facing offers, no published pricing, transparent commercial language.
+
+==============================================================================
+GLOBAL ELEMENTS (every page)
+==============================================================================
+NAV:        Garden Management | Garden Projects | Garden Design | Transformation | How It Works | About
+NAV CTA:    Book a Garden Review
+MOBILE NAV adds: Your Garden Manager, Garden Review, Services A to Z, Projects, Areas, Journal, FAQ, Contact
+FOOTER:     Complete garden management for homeowners across Surrey, Hampshire
+            and Sussex. One trusted point of contact for design, projects,
+            maintenance and everything in between.
+LEGAL ROW:  (c) 2026 Blossom | Privacy | Cookie policy | Website terms
+COOKIES:    A quiet word about cookies. We would like to use optional analytics
+            to understand which pages help visitors most. No advertising and no
+            data sold. The site works fully either way.
+            [Accept analytics] [Essential only]
+
+==============================================================================
+PAGE: HOME  (index.html)
+==============================================================================
+META TITLE: Complete Garden Management | Surrey, Hampshire & Sussex | Blossom
+META DESC:  One trusted point of contact for everything your garden needs. Blossom designs, delivers and manages gardens, outdoor projects, maintenance and specialist suppliers across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    Complete Garden Management
+H1:         One trusted point of contact for everything your garden needs.
+STANDFIRST: From planting and maintenance to garden offices, landscaping and complete transformations, Blossom works out what is needed, finds the right specialists and manages every detail for you.
+CTA:        Book a Garden Review
+CTA:        Explore what we manage
+SMALL:      Serving homeowners across Surrey, Hampshire and Sussex.
+EYEBROW:    The garden is part of the property
+H2:         Looking after it should not become another job for you.
+BODY:       A garden can involve designers, gardeners, landscapers, arborists, electricians, irrigation engineers, pool specialists, furniture makers and building suppliers. Each solves one part. Someone still has to understand the whole, make the decisions connect and keep everything moving.
+BODY:       Blossom becomes that single point of responsibility. We can solve one immediate problem, run a defined project, transform the entire garden or manage it continuously throughout the year.
+PULL QUOTE: You decide what you want from the garden. We take care of making it happen.
+EYEBROW:    Five ways to use Blossom
+H2:         Start with what the garden needs now.
+EYEBROW:    1 · Garden Review
+H2:         Understand what the garden needs.
+BODY:       An expert assessment of the garden, its problems, its potential and the most sensible priorities. You receive a clear plan for what should happen next.
+CTA:        Start with a Garden Review
+EYEBROW:    2 · Garden Design
+H2:         Design for the way you want to live.
+BODY:       Whole gardens, individual spaces, planting, outdoor rooms and bespoke features, designed around the property, the ground and the way you want to live.
+CTA:        Explore Garden Design
+EYEBROW:    3 · Garden Projects
+H2:         Done for you, whatever it is.
+BODY:       Tell us what you want to add, repair or improve. We define the requirement, source the right specialists, compare the options and manage delivery for you.
+CTA:        Explore Garden Projects
+EYEBROW:    4 · Complete Garden Transformation
+H2:         One accountable lead, start to finish.
+BODY:       One accountable lead from the first conversation to the completed garden. Design, permissions, procurement, contractors, construction, planting and handover.
+CTA:        Explore Complete Transformation
+EYEBROW:    5 · Your Garden Manager
+H2:         Ongoing responsibility, one number to call.
+BODY:       Ongoing oversight of the garden, its maintenance, suppliers, systems, problems and future improvements. One number to call whenever the garden needs attention.
+CTA:        Explore Ongoing Management
+EYEBROW:    Nothing is off the table
+H2:         One small improvement or everything outside the house.
+STANDFIRST: Blossom manages conventional garden work and the projects that sit between landscaping, construction, technology and outdoor living.
+  -         Planting and garden renovation
+  -         Patios, paths, walls and landscaping
+  -         Garden offices, gyms and studios
+  -         Sheds, greenhouses and storage
+  -         Pergolas, pavilions and covered terraces
+  -         Outdoor kitchens, bars and entertaining spaces
+  -         Pools, spas, saunas and cold plunges
+  -         Lighting, power, irrigation and smart controls
+  -         Ponds, drainage and water management
+  -         Play areas, sports and pet spaces
+  -         Gates, security and access
+  -         Bespoke furniture, planters, sculpture and styling
+BODY:       If it belongs in the garden, supports the garden or changes how you use the garden, ask Blossom.
+CTA:        See the complete service list
+EYEBROW:    Done for you
+H2:         One brief. One plan. One person keeping hold of the whole.
+CTA:        See how Blossom works
+  -         Tell us what you need
+BODY:       It can be a finished idea, a persistent problem or simply the feeling that the garden is not working as it should.
+  -         We establish the right solution
+BODY:       We assess the garden, define the requirement, identify constraints and give you a clear route with realistic costs and decisions.
+  -         We assemble and manage the delivery
+BODY:       We source suitable specialists, compare proposals, coordinate the programme, manage communication and protect the quality of the result.
+  -         We remain accountable
+BODY:       We close defects, organise aftercare and can continue managing the garden once the work is complete.
+EYEBROW:    Your Garden Manager
+H2:         The garden has someone looking after the whole of it.
+BODY:       Maintenance is only one part of garden management. Your Garden Manager oversees the people, plans, systems and decisions that keep the garden working and improving.
+  -         Annual garden plan and priorities
+  -         Gardener and contractor coordination
+  -         Seasonal work programme
+  -         Routine garden inspections
+  -         Quote and invoice review
+  -         Plant, tree and lawn care planning
+  -         Lighting, irrigation, pond and pool servicing
+  -         Reactive problem management
+  -         Warranty and defect tracking
+  -         Future improvement planning
+CTA:        Meet Your Garden Manager
+EYEBROW:    Why Blossom
+H2:         Design judgement, commercial discipline and professional project leadership.
+BODY:       Blossom was founded by Damian Hickey, a designer and project leader with more than 30 years of experience delivering complex work for large organisations and global real-estate environments.
+BODY:       That experience brings a different level of control to the garden: clear briefs, considered design, properly compared proposals, visible budgets, managed suppliers and quality held through to completion.
+CTA:        About Blossom
+EYEBROW:    Where we work
+H2:         Surrey, Hampshire and Sussex.
+BODY:       Local enough to understand the property, visit the garden and manage the work properly. For design-only commissions and specialist projects, ask us about locations beyond the core area.
+CTA:        Areas we cover
+EYEBROW:    Begin with the garden as it is today
+H2:         Tell us what needs to change.
+STANDFIRST: You do not need to know which trade, product or service will solve it. That is what the first conversation is for.
+CTA:        Book a Garden Review
+
+==============================================================================
+PAGE: COMPLETE GARDEN MANAGEMENT  (garden-management.html)
+==============================================================================
+META TITLE: Complete Garden Management for Homeowners | Blossom
+META DESC:  Blossom manages every aspect of your garden, from maintenance and supplier coordination to improvements, garden buildings and major projects across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    Complete Garden Management
+H1:         Everything your garden needs, managed in one place.
+STANDFIRST: One accountable relationship for the condition, operation and continuing improvement of your garden.
+CTA:        Discuss garden management
+EYEBROW:    More than maintenance
+H2:         A gardener cares for the plants. Blossom manages the garden.
+BODY:       Gardens contain living systems, built structures, utilities, equipment, suppliers and continual decisions. Mowing and pruning matter, but they do not manage drainage, lighting, irrigation, contractors, repairs, budgets, warranties or improvement projects.
+BODY:       Blossom oversees the whole environment. We can work with the people you already trust, replace missing or unsuitable suppliers and bring in specialists whenever the garden needs them.
+EYEBROW:    What we manage
+H2:         The people, the place and the plan.
+H4:         The garden itself
+  -         Planting, trees, hedges and lawns
+  -         Soil, drainage and water management
+  -         Seasonal development and replacement planting
+  -         Wildlife, biodiversity and sustainability
+  -         Kitchen gardens, orchards and productive areas
+H4:         Built assets and systems
+  -         Garden buildings and outdoor rooms
+  -         Terraces, paths, walls, fences and gates
+  -         Lighting, power, irrigation and smart controls
+  -         Ponds, pools, spas and water features
+  -         Outdoor kitchens, furniture and equipment
+H4:         People and suppliers
+  -         Maintenance gardeners
+  -         Landscape contractors
+  -         Arborists and horticultural specialists
+  -         Electricians, plumbers and irrigation engineers
+  -         Pool, pond, gate, security and building specialists
+H4:         Commercial control
+  -         Annual budget and priorities
+  -         Quotations and supplier comparison
+  -         Work orders and scheduling
+  -         Invoice review
+  -         Warranty and defect management
+  -         Planned replacement and improvement
+EYEBROW:    The garden management plan
+H2:         A clear record of what you own, what it needs and what happens next.
+BODY:       Every ongoing relationship begins with a Garden Management Review. We establish the condition of the garden, record its important assets and systems, review existing suppliers and build the first annual plan.
+H4:         You receive
+  -         A garden condition and priorities report
+  -         A garden asset and supplier register
+  -         A seasonal maintenance programme
+  -         Known risks and outstanding repairs
+  -         Recommended improvement projects
+  -         An initial annual budget and decision calendar
+EYEBROW:    Ongoing management
+H3:         Planned care and responsive help.
+BODY:       The exact service is shaped around the garden and the level of responsibility you want Blossom to take. It can include scheduled inspections, supplier management, seasonal planning, project delivery and a priority route for anything unexpected.
+BODY:       You receive a concise update at an agreed frequency, with completed work, upcoming decisions, current expenditure and anything requiring your approval.
+EYEBROW:    Your existing team
+H3:         Good suppliers stay. Missing capabilities are added.
+BODY:       Blossom does not replace people for the sake of it. We review the gardeners and specialists already involved, clarify responsibilities and make sure their work supports the same garden plan. Where a gap exists, we source and manage the right person to fill it.
+EYEBROW:    Commercial clarity
+H3:         You know what Blossom costs and what everyone else is charging.
+BODY:       Ongoing management uses an agreed onboarding fee and management retainer. Project work and specialist services are scoped separately. Any supplier commission, procurement fee or product margin relevant to your appointment is disclosed before you approve it.
+SMALL:      Exact fees depend on the size, complexity and level of responsibility involved. They are confirmed in writing before the service begins.
+H2:         Give the whole garden one point of responsibility.
+CTA:        Book a Garden Management Review
+
+==============================================================================
+PAGE: GARDEN PROJECTS  (garden-projects.html)
+==============================================================================
+META TITLE: Done-for-You Garden Projects | Surrey, Hampshire & Sussex | Blossom
+META DESC:  Garden offices, gyms, pergolas, outdoor kitchens, pools, landscaping, lighting and more. Blossom scopes, sources and manages any garden project for you.
+------------------------------------------------------------------------------
+EYEBROW:    Done-for-you Garden Projects
+H1:         Tell us what you want. We will organise everything it takes.
+STANDFIRST: One defined improvement or a connected series of works. Blossom turns the requirement into a plan, finds the right specialists and manages the project through to completion.
+CTA:        Tell us about your project
+EYEBROW:    Any scale, any starting point
+H2:         The project does not need to begin with a garden design.
+BODY:       You might want a garden office, a pergola, better lighting, a new terrace or someone to fix a project that has gone wrong. Blossom starts with the outcome, then works out the design, technical and delivery support needed to achieve it.
+EYEBROW:    Outdoor rooms and buildings
+H2:         Useful space, properly integrated into the garden.
+  -         Garden offices and meeting rooms
+  -         Gyms, yoga and wellness studios
+  -         Art, music, photography and maker studios
+  -         Therapy and treatment rooms
+  -         Guest rooms and annexes, subject to consent
+  -         Summerhouses and entertainment rooms
+  -         Workshops, potting sheds and storage buildings
+  -         Greenhouses, glasshouses and polytunnels
+  -         Pool houses, changing rooms and sauna buildings
+  -         Garages, carports, bike and equipment stores
+BODY:       Blossom can manage feasibility, design, planning advice, supplier selection, groundworks, utilities, fit-out and the surrounding landscape.
+EYEBROW:    Outdoor living
+H2:         Make the garden a place you use, not simply look at.
+  -         Pergolas, pavilions and covered terraces
+  -         Outdoor kitchens and barbecue stations
+  -         Garden bars and entertaining spaces
+  -         Dining terraces and built-in seating
+  -         Fireplaces, firepits and heating
+  -         Outdoor cinemas, audio and lighting
+  -         Pools, spas, hot tubs and cold plunges
+  -         Saunas, outdoor showers and wellness areas
+  -         Play areas, sports courts and exercise spaces
+EYEBROW:    Landscape and infrastructure
+H2:         The work beneath and around the finished garden.
+  -         Patios, paths, steps and driveways
+  -         Walls, retaining structures and level changes
+  -         Fencing, gates, screens and access control
+  -         Drainage, rainwater management and irrigation
+  -         Garden lighting, exterior power and connectivity
+  -         Ponds, streams, fountains and water features
+  -         Planting, lawns, meadows, orchards and kitchen gardens
+  -         Privacy, screening and acoustic improvements
+  -         Security, CCTV and smart garden technology
+EYEBROW:    Bespoke details
+H2:         Designed for the place rather than selected as an afterthought.
+  -         Bespoke furniture and built-in seating
+  -         Planters, screens and trellis
+  -         Outdoor cabinetry and storage
+  -         Fire features and water features
+  -         Stone, metal and timber commissions
+  -         Sculpture, mirrors and garden art
+  -         Antiques, architectural salvage and reclaimed materials
+  -         Seasonal styling and event preparation
+EYEBROW:    What Blossom does
+H2:         The client-side work that turns an idea into a finished result.
+BODY:       You retain the important decisions. Blossom takes away the chasing, comparing, coordinating and problem solving.
+H3:         Specialist work
+BODY:       Planning consultants, architects, structural engineers, arborists, ecologists, electricians, gas engineers and other regulated specialists are appointed when the project requires them. Blossom coordinates their contribution and keeps it connected to the wider garden.
+  -         Define the requirement and success criteria
+  -         Inspect the garden and identify constraints
+  -         Establish the likely route, budget and programme
+  -         Coordinate any design or technical advice
+  -         Source and assess suitable suppliers
+  -         Compare proposals on a consistent basis
+  -         Agree scope, responsibilities and payment stages
+  -         Coordinate access, logistics and dependencies
+  -         Monitor delivery, cost, quality and changes
+  -         Manage defects, handover, warranties and aftercare
+H2:         What would you like the garden to do next?
+CTA:        Discuss a Garden Project
+
+==============================================================================
+PAGE: GARDEN DESIGN  (garden-design.html)
+==============================================================================
+META TITLE: Garden Design in Surrey, Hampshire & Sussex | Blossom
+META DESC:  Whole-garden and individual-area design grounded in your property, budget and lifestyle, with optional complete project delivery and ongoing garden management.
+------------------------------------------------------------------------------
+EYEBROW:    Garden Design
+H1:         Designed for the property, the ground and the way you want to live.
+STANDFIRST: A complete new garden, a better use for one part of it or a considered improvement that works with what is already there.
+CTA:        Book a Garden Review
+EYEBROW:    Design at the right scale
+H2:         Start again, work in phases or improve what deserves to stay.
+BODY:       Not every garden needs a complete redesign. Blossom can create a masterplan for the whole property, redesign a specific area, resolve a difficult problem or develop one feature such as an outdoor room, entertaining terrace or planting scheme.
+H3:         Whole-garden masterplanning
+BODY:       A masterplan establishes the long-term shape of the garden even when delivery will happen over several years. Individual projects can then be completed in the right order without creating conflicts, wasted work or disconnected results.
+CAPTION:    Design begins with the requirement, not the catalogue.
+EYEBROW:    What design can include
+  -         Garden strategy and client brief
+  -         Measured survey and site analysis
+  -         Concept and masterplan
+  -         Levels, layout and circulation
+  -         Materials and hard-landscape design
+  -         Planting design and plant schedules
+  -         Lighting and irrigation coordination
+  -         Drainage and water-management strategy
+  -         Garden buildings and outdoor-living integration
+  -         Furniture, features and styling
+  -         3D visualisation and design presentations
+  -         Construction drawings and specifications
+  -         Tender and contractor information
+  -         Phasing and implementation plan
+  -         Maintenance and long-term development plan
+EYEBROW:    Planting
+H2:         Right plant, right place, right level of care.
+BODY:       Planting is developed around soil, aspect, exposure, drainage, seasonal structure and the amount of gardening you want to do. Schemes can be formal, naturalistic, productive, wildlife-focused, drought resilient or any considered combination that belongs to the property.
+EYEBROW:    Designed to be delivered
+H2:         The drawings are only useful if the garden can be built and cared for.
+BODY:       Budget, access, construction, maintenance and procurement are considered as the design develops. You can take the completed information to your own contractor, ask Blossom to manage the project or continue into a complete transformation.
+EYEBROW:    Design fees
+H2:         Defined by the work, agreed before it starts.
+BODY:       Design is proposed in clear stages with an output and fee for each. Surveys and specialist advice are identified separately, so you know what is included and what decisions sit ahead.
+H2:         Begin with a clear view of what the garden could become.
+CTA:        Book a Garden Review
+
+==============================================================================
+PAGE: COMPLETE GARDEN TRANSFORMATION  (complete-garden-transformation.html)
+==============================================================================
+META TITLE: Complete Garden Transformation | Design to Delivery | Blossom
+META DESC:  One accountable lead for garden design, permissions, procurement, contractors, construction, planting and handover across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    The complete service
+H1:         One lead, from the first idea to the finished garden.
+STANDFIRST: You make the important decisions. Blossom does the planning, sourcing, coordinating, checking and chasing required to deliver them.
+CTA:        Discuss a transformation
+EYEBROW:    Why one lead
+H2:         Coordinating a garden transformation is a job. It should not become yours.
+BODY:       A substantial garden can involve surveyors, designers, planning advisers, landscape contractors, electricians, arborists, nurseries, building suppliers and specialist installers. Managed separately, each becomes another relationship, quotation, diary and risk for the homeowner.
+BODY:       Blossom provides a single point of accountability across the entire journey. Information, decisions and quality are carried from the original brief through to completion and aftercare.
+EYEBROW:    The journey
+H2:         Clear stages with a decision at each point.
+  -         Garden Review
+BODY:       We understand the property, the problems, the ambition, the likely constraints and the level of investment involved.
+  -         Survey and brief
+BODY:       We establish what exists, what must change and what the completed garden needs to achieve.
+  -         Concept and masterplan
+BODY:       The overall design, structure, materials, planting and major features are developed as one coherent garden.
+  -         Technical development
+BODY:       Drawings, specifications, permissions and specialist input turn the approved concept into information that can be priced and delivered.
+  -         Procurement
+BODY:       Suitable contractors and suppliers are identified, proposals are compared and appointments are made against a clear scope and programme.
+  -         Delivery
+BODY:       Blossom coordinates the work, communication, decisions, progress, costs, changes and quality on the client's behalf.
+  -         Completion and establishment
+BODY:       Defects are recorded and managed, warranties and care information are assembled and the garden moves into its establishment period.
+  -         Ongoing management
+BODY:       If you want Blossom to retain responsibility, Your Garden Manager continues the plan, supplier coordination and future improvement.
+EYEBROW:    Budget and programme
+H2:         Ambition, money and time kept in the same conversation.
+BODY:       The working budget and desired completion are discussed from the outset. Estimates become firmer as the design, specification and supplier proposals develop. Changes are recorded and their implications explained before they are approved.
+BODY:       No website range can responsibly price a garden without understanding its size, access, levels, ground, structures and specification. The Garden Review exists to establish a realistic starting position.
+H2:         One garden. One plan. One accountable lead.
+CTA:        Book a Garden Review
+
+==============================================================================
+PAGE: YOUR GARDEN MANAGER  (your-garden-manager.html)
+==============================================================================
+META TITLE: Ongoing Garden Management | Your Garden Manager | Blossom
+META DESC:  Ongoing garden management for homeowners across Surrey, Hampshire and Sussex. Blossom coordinates maintenance, suppliers, systems, repairs and future improvements.
+------------------------------------------------------------------------------
+EYEBROW:    Your Garden Manager
+H1:         One number to call whenever the garden needs attention.
+STANDFIRST: Planned care, reliable suppliers, responsive problem solving and a garden that continues to improve rather than gradually getting away from you.
+CTA:        Discuss ongoing management
+EYEBROW:    The retained service
+H2:         We keep hold of the detail so you do not have to.
+BODY:       Your Garden Manager is for homeowners who want the garden looked after as an important part of the property. Blossom understands the plan, knows the suppliers, tracks what is due and becomes the first call for anything new or unexpected.
+EYEBROW:    Planned garden management
+  -         Annual condition and priorities review
+  -         Garden asset and supplier register
+  -         Seasonal maintenance programme
+  -         Planting, lawn, tree and hedge planning
+  -         Irrigation and water-management checks
+  -         Lighting, power and equipment servicing
+  -         Pond, pool, spa and water-feature coordination
+  -         Garden-building and structure maintenance
+  -         Furniture and surface care
+  -         Budget and improvement planning
+EYEBROW:    People and performance
+  -         Gardener and contractor briefing
+  -         Supplier scheduling and access
+  -         Quotation comparison
+  -         Work-quality checks
+  -         Invoice review
+  -         Issue escalation and resolution
+  -         Warranty and defect tracking
+  -         Replacement supplier sourcing
+EYEBROW:    Reactive support
+  -         Storm and tree damage
+  -         Flooding and drainage failure
+  -         Irrigation, lighting and gate faults
+  -         Plant losses, pests and disease
+  -         Pond, pool and equipment problems
+  -         Contractor and supplier failures
+  -         Urgent preparation for guests, events or sale
+SMALL:      Response times and emergency arrangements depend on the service level and specialist availability. They are agreed as part of the management plan.
+EYEBROW:    Continuous improvement
+H2:         Care for today, decisions for what comes next.
+BODY:       The retained relationship makes future projects easier. Blossom already understands the property, the budget, the existing systems and the way you use the garden. Improvements can be identified early, planned in the right season and delivered without starting from zero each time.
+EYEBROW:    Management fees
+H2:         An onboarding stage and an agreed monthly service.
+BODY:       The Garden Management Review establishes the starting point. The ongoing fee then reflects the garden's scale, complexity, supplier network, inspection frequency and the level of responsibility you want Blossom to take.
+BODY:       Projects and significant specialist works are scoped separately. There are no hidden charges or undisclosed commercial arrangements.
+H2:         Give the garden a manager, not another list of jobs.
+CTA:        Book a Garden Management Review
+
+==============================================================================
+PAGE: GARDEN REVIEW  (garden-review.html)
+==============================================================================
+META TITLE: Garden Review and Management Plan | Blossom
+META DESC:  An expert review of your garden, its condition, problems, potential and priorities, followed by a clear recommended plan.
+------------------------------------------------------------------------------
+EYEBROW:    The starting point
+H1:         Understand what the garden needs before deciding what to buy.
+STANDFIRST: A structured on-site review of the garden as it is today, what you want from it and the most sensible route forward.
+CTA:        Book a Garden Review
+EYEBROW:    Who it is for
+H2:         Useful when you know something needs to change, but not necessarily what.
+  -         You have inherited a garden and need a plan
+  -         The garden has several unrelated problems
+  -         You want to improve it without starting again
+  -         You are considering a building, pool or major feature
+  -         You need help prioritising expenditure
+  -         Maintenance is inconsistent or difficult to manage
+  -         A project has stalled or gone wrong
+  -         You want Blossom to manage the garden ongoing
+EYEBROW:    What we examine
+  -         How the garden is used
+  -         Condition and performance
+  -         Planting, trees and lawns
+  -         Levels, surfaces and boundaries
+  -         Drainage, irrigation and water
+  -         Buildings, structures and equipment
+  -         Lighting, power and security
+  -         Maintenance and existing suppliers
+  -         Immediate risks and repairs
+  -         Future opportunities
+  -         Likely dependencies, permissions and specialist input
+EYEBROW:    What you receive
+H2:         A practical route, not a generic inspiration board.
+BODY:       The exact review format and fee are confirmed before booking. If more technical investigation is required, it is recommended rather than guessed at.
+H4:         You receive
+  -         Summary of what we found
+  -         Immediate priorities
+  -         Recommended projects or interventions
+  -         Suggested sequence
+  -         Budget considerations and unknowns
+  -         Specialists or surveys likely to be required
+  -         Recommended next service
+H2:         Start with clarity.
+CTA:        Request a Garden Review
+
+==============================================================================
+PAGE: HOW IT WORKS  (how-it-works.html)
+==============================================================================
+META TITLE: How Complete Garden Management Works | Blossom
+META DESC:  How Blossom reviews, plans, sources, delivers and manages garden work for homeowners across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    How Blossom works
+H1:         You keep the decisions. We take away the management burden.
+STANDFIRST: The process adapts to the job, but the discipline stays the same: understand, define, source, deliver and manage.
+STEP:       01
+H3:         Understand
+BODY:       We listen to what you want, inspect the garden and establish the real problem or opportunity. Where necessary, we coordinate surveys or specialist advice before recommending a solution.
+H4:         You receive
+  -         A shared understanding of the requirement
+  -         Known constraints and important unknowns
+  -         A recommended route forward
+STEP:       02
+H3:         Define
+BODY:       We turn the requirement into a clear scope, desired result, working budget, responsibilities and programme. For design work, this includes the agreed design brief.
+H4:         You receive
+  -         A written scope or brief
+  -         An agreed decision and approval process
+  -         A clear explanation of Blossom's fees
+STEP:       03
+H3:         Design and plan
+BODY:       The solution is designed and developed to the level the project requires. Products, materials, specialists, permissions, buildability, maintenance and dependencies are resolved before commitments are made.
+H4:         You receive
+  -         The design or proposed solution
+  -         Specifications and supporting information
+  -         Updated budget and programme
+STEP:       04
+H3:         Source
+BODY:       We identify suitable suppliers and contractors, issue consistent information, clarify proposals and help you choose on capability, value and fit rather than headline price alone.
+H4:         You receive
+  -         Comparable proposals
+  -         Clear recommendations
+  -         Agreed appointments and responsibilities
+STEP:       05
+H3:         Deliver
+BODY:       Blossom becomes the coordinating point for the client, design team, suppliers and contractors. We manage information, decisions, programme, expenditure, issues and quality at the frequency agreed for the project.
+H4:         You receive
+  -         Progress updates
+  -         Visible decisions and changes
+  -         Quality observations and issue management
+STEP:       06
+H3:         Complete
+BODY:       We record incomplete or defective work, coordinate its resolution, gather relevant care and warranty information and establish what the garden needs next.
+H4:         You receive
+  -         Completion and defect record
+  -         Care and warranty information
+  -         Recommended establishment or management plan
+STEP:       07
+H3:         Manage
+BODY:       Where Blossom remains as Your Garden Manager, the project becomes part of the garden's ongoing operating plan rather than a disconnected one-off intervention.
+EYEBROW:    Approvals and authority
+H2:         We act for you, but we do not make unapproved commitments with your money.
+BODY:       The appointment sets out what Blossom can decide, what requires approval and any financial thresholds. You can delegate routine decisions while retaining control over scope, budget and significant changes.
+EYEBROW:    Transparency
+H2:         The commercial arrangement is stated before the work starts.
+BODY:       Blossom may be paid through fixed fees, staged design fees, project-management fees, retainers, procurement fees or disclosed supplier arrangements, depending on the service. The basis is confirmed in writing so you understand who is being paid, by whom and for what.
+H2:         One process, shaped around what the garden needs.
+CTA:        Start the conversation
+
+==============================================================================
+PAGE: SERVICES A TO Z  (garden-services.html)
+==============================================================================
+META TITLE: Garden Services A to Z | Complete Garden Management | Blossom
+META DESC:  The complete range of garden design, outdoor living, garden buildings, landscaping, project management and ongoing garden services Blossom can coordinate.
+------------------------------------------------------------------------------
+EYEBROW:    Services A to Z
+H1:         If it belongs outside the house, ask Blossom.
+STANDFIRST: The list is intentionally broad. Blossom manages the whole garden and assembles the specialist team each requirement needs.
+CTA:        Tell us what your garden needs
+TAG:        Advice, assessment and planning
+  -         Garden consultations and reviews
+  -         Condition and potential assessments
+  -         Maintenance and supplier reviews
+  -         Budget and priority planning
+  -         Pre-purchase and pre-sale garden advice
+  -         Project rescue and second opinions
+  -         Masterplans and phased development plans
+  -         Planning and specialist coordination
+TAG:        Garden and planting design
+  -         Complete garden design
+  -         Garden renovation
+  -         Individual-area design
+  -         Planting and border design
+  -         Trees, hedges, orchards and productive gardens
+  -         Wildlife, sensory and climate-resilient gardens
+  -         Lighting, irrigation and drainage coordination
+  -         Technical drawings and specifications
+TAG:        Garden buildings and structures
+  -         Offices, gyms and studios
+  -         Guest rooms and annexes
+  -         Summerhouses and entertainment rooms
+  -         Sheds, workshops and storage
+  -         Greenhouses and glasshouses
+  -         Pergolas, pavilions and covered terraces
+  -         Pool houses, saunas and changing rooms
+  -         Garages, carports and equipment stores
+TAG:        Outdoor living and recreation
+  -         Outdoor kitchens and bars
+  -         Dining and entertaining terraces
+  -         Fireplaces, firepits and heating
+  -         Outdoor cinemas, sound and lighting
+  -         Pools, spas, hot tubs and cold plunges
+  -         Sports, exercise and play spaces
+  -         Pet areas and animal structures
+  -         Bespoke furniture, art and styling
+TAG:        Landscape, water and infrastructure
+  -         Patios, paths, steps and driveways
+  -         Walls, terraces, fencing and gates
+  -         Drainage, rain gardens and water harvesting
+  -         Irrigation and water management
+  -         Ponds, streams, fountains and water features
+  -         Garden lighting, exterior power and connectivity
+  -         Security, access and smart technology
+  -         Groundworks, levels and site access
+TAG:        Project delivery
+  -         Feasibility and scope definition
+  -         Budget and programme development
+  -         Designer and specialist coordination
+  -         Planning and technical-adviser coordination
+  -         Contractor and supplier sourcing
+  -         Tendering and proposal comparison
+  -         Procurement and delivery coordination
+  -         Project, cost, change and quality management
+  -         Defects, warranties and handover
+TAG:        Ongoing garden management
+  -         Annual garden management plans
+  -         Gardener and supplier coordination
+  -         Seasonal schedules and inspections
+  -         Tree, lawn and planting programmes
+  -         Building, lighting, irrigation and equipment servicing
+  -         Quote, invoice and warranty management
+  -         Reactive issue resolution
+  -         Continuous improvement planning
+TAG:        How services are delivered
+BODY:       Some services are delivered directly by Blossom. Others are designed, supplied or installed by specialist partners under Blossom's coordination. The route is explained before you proceed.
+CTA:        Tell us what your garden needs
+
+==============================================================================
+PAGE: FAQ  (faq.html)
+==============================================================================
+META TITLE: Complete Garden Management FAQ | Blossom
+META DESC:  Straight answers about garden management, design, projects, maintenance, suppliers, fees and how Blossom works.
+------------------------------------------------------------------------------
+EYEBROW:    Questions, answered clearly
+H1:         What does complete garden management actually mean?
+STANDFIRST: Straight answers about garden management, design, projects, maintenance, suppliers, fees and how Blossom works.
+FAQ Q:      Is Blossom a garden designer, project manager or maintenance company?
+BODY:       Blossom is a complete garden management service. Garden design and project management are core capabilities, but the responsibility is broader: understanding what the garden needs, finding and coordinating the right people, managing work and helping the garden improve over time. Maintenance can be included and managed through suitable gardening partners.
+FAQ Q:      What can Blossom help with?
+BODY:       Anything connected to the garden or outdoor property. That includes planting, landscaping and maintenance, but also garden offices, gyms, sheds, pergolas, outdoor kitchens, pools, spas, lighting, irrigation, security, furniture, play, sport and bespoke projects. If specialist expertise is required, Blossom sources and coordinates it.
+FAQ Q:      Does Blossom carry out all the work itself?
+BODY:       No single business should claim to be expert in every trade involved in a substantial garden. Blossom owns the brief, design where appointed, commercial process, coordination and client experience. Appropriately competent specialists carry out regulated and trade-specific work.
+FAQ Q:      Can you manage the gardener or contractors we already use?
+BODY:       Yes. Good existing suppliers do not need to be replaced. Blossom reviews the current arrangement, clarifies responsibilities and coordinates everyone against the same garden plan. Where a capability or service standard is missing, we help fill the gap.
+FAQ Q:      Can you take over a project that has already started?
+BODY:       Yes, subject to an initial review. We establish the current scope, appointments, expenditure, progress, defects and outstanding decisions before proposing a recovery or completion plan.
+FAQ Q:      Can you manage a design created by somebody else?
+BODY:       Yes. We first review whether the information is sufficiently complete, buildable and consistent with the working budget. Any gaps are resolved with the original designer or another suitable specialist before delivery continues.
+FAQ Q:      Can Blossom manage just one project?
+BODY:       Yes. Garden Projects is a done-for-you service for one defined improvement, installation, repair or problem. You do not need an ongoing management agreement or a complete garden redesign.
+FAQ Q:      Do I have to start with a Garden Review?
+BODY:       It is the best starting point when the requirement is broad, unclear or connected to several parts of the garden. A well-defined project may begin with a shorter scoping conversation before we confirm the appropriate next step.
+FAQ Q:      How does ongoing garden management work?
+BODY:       It begins with an onboarding review and management plan. We then agree the inspections, supplier coordination, reporting, reactive support and decision authority required. The service operates under an agreed retainer, while significant projects are scoped separately.
+FAQ Q:      How are Blossom's fees calculated?
+BODY:       The basis depends on the work. It may be a fixed consultation fee, staged design fee, fixed project fee, monthly project-management fee, percentage fee, ongoing retainer or a disclosed procurement arrangement. The basis and inclusions are confirmed in writing before appointment.
+FAQ Q:      Does Blossom receive supplier commissions?
+BODY:       Blossom does not use hidden commercial arrangements. If a relevant supplier commission, procurement fee or product margin applies, it is disclosed as part of the proposal before you approve the appointment or purchase.
+FAQ Q:      Will Blossom control payments to contractors?
+BODY:       The appointment defines Blossom's authority. We can review applications for payment, compare them with progress and make recommendations. Payments remain subject to the contract and the approval process agreed with you.
+FAQ Q:      Do you guarantee a contractor's work?
+BODY:       The contractor or supplier remains responsible for its work and warranties. Blossom manages scope, information, observation, defects and escalation within its appointment, but does not replace the legal responsibilities of the appointed specialist.
+FAQ Q:      Do garden buildings require planning permission?
+BODY:       Some can be built under permitted-development rights, while others require planning permission, Building Regulations approval or specialist advice. Location, height, use, boundary position, listed status and designated land can all affect the route. Blossom identifies the likely requirements and coordinates qualified advice where needed.
+FAQ Q:      Can the garden be improved in phases?
+BODY:       Yes. A whole-garden masterplan can establish the long-term direction, then projects can be prioritised and delivered in a sequence that avoids abortive work and keeps each phase useful.
+FAQ Q:      Which areas do you cover?
+BODY:       The core service area is Surrey, Hampshire and Sussex. Travel depends on the work and the frequency of visits required. Design-only and specialist commissions may be possible further away.
+FAQ Q:      What if Blossom is not the right business for the job?
+BODY:       We will say so. If the requirement is better handled directly by a specialist, we can recommend the right route rather than create unnecessary management around a simple task.
+
+==============================================================================
+PAGE: PROJECTS  (projects.html)
+==============================================================================
+META TITLE: Garden Projects and Case Studies | Blossom
+META DESC:  Real Blossom garden reviews, designs, managed projects, transformations and ongoing garden-management case studies.
+------------------------------------------------------------------------------
+EYEBROW:    Projects
+H1:         The problem, the plan and what changed.
+STANDFIRST: Blossom case studies document more than the finished photograph. They show what the client needed, how the work was organised and the difference the completed result made.
+EYEBROW:    Case study structure
+H2:         What every case study will record
+  -         The property and garden
+  -         What the client needed
+  -         Why the existing position was not working
+  -         The scope Blossom accepted
+  -         The plan and design decisions
+  -         The specialists involved
+  -         The budget band, where the client permits publication
+  -         The delivery programme
+  -         Issues encountered and how they were resolved
+  -         The completed result
+  -         The ongoing management plan
+  -         The client's view, published only with permission
+BODY:       The first case studies will be added when real Blossom work can be documented honestly. No stock project will be presented as client evidence.
+BODY:       First case study slot, following the structure opposite.
+BODY:       Second case study slot, same structure.
+BODY:       Third case study slot, same structure.
+
+==============================================================================
+PAGE: ABOUT  (about.html)
+==============================================================================
+META TITLE: About Blossom | Design and Complete Garden Management
+META DESC:  Blossom combines design judgement with more than 30 years of project and commercial leadership to manage gardens properly from idea through delivery and ongoing care.
+------------------------------------------------------------------------------
+EYEBROW:    About Blossom
+H1:         Design judgement. Project discipline. One person accountable.
+STANDFIRST: Blossom was created for homeowners who want the garden taken seriously as part of the property, without having to manage every specialist, supplier and decision themselves.
+EYEBROW:    Why Blossom exists
+H2:         The garden industry is full of capable specialists. The homeowner is still expected to manage the whole.
+BODY:       Designers design. Gardeners maintain. Landscapers build. Arborists, electricians, pool companies and building suppliers solve their own specialist part. The gaps between them are where decisions drift, costs hide and responsibility becomes unclear.
+BODY:       Blossom closes those gaps. It gives the garden a single point of responsibility that can see the whole property, organise the right expertise and stay involved from the first requirement through to long-term care.
+EYEBROW:    Meet the founder
+H2:         Damian Hickey
+BODY:       Damian is a designer and project leader with more than 30 years of experience turning complex ideas into delivered outcomes for large organisations and global real-estate environments.
+BODY:       His background spans industrial design, product and service development, materials, technology, property and the leadership of substantial, multi-disciplinary programmes. The common thread is making many moving parts work as one: understanding the real requirement, establishing a strong design direction and then managing people, money, decisions and quality through to completion.
+BODY:       Blossom brings that experience into the garden. It combines Damian's lifelong interest in design, materials and nature with the commercial discipline required to run projects on time, keep budgets visible and hold quality at the centre of every decision.
+BODY:       The ambition is simple: homeowners should be able to improve and manage the garden without becoming its unpaid project manager.
+BODY:       Portrait photograph of Damian to follow.
+EYEBROW:    How we behave
+H3:         Accountable
+BODY:       One named lead, clear responsibilities and no disappearing between stages.
+H3:         Considered
+BODY:       The right intervention for the property, rather than selling the largest available project.
+H3:         Commercially clear
+BODY:       Defined fees, visible decisions and disclosed commercial arrangements.
+H3:         Independent in judgement
+BODY:       Recommendations based on the client's requirement, quality, value and fit.
+H3:         Practical
+BODY:       Beautiful ideas resolved against maintenance, access, programme, budget and delivery.
+TAG:        The specialist network
+H3:         The right people for the garden, coordinated as one team.
+BODY:       Blossom builds relationships with garden designers, landscape contractors, gardeners, arborists, surveyors, engineers, planning advisers, building suppliers, craftspeople and technical specialists across the region. Partners remain responsible for their professional and trade-specific work. Blossom makes sure their contribution answers the same brief and supports the same finished result.
+H2:         The garden deserves the same quality of management as the home.
+CTA:        Start a conversation
+
+==============================================================================
+PAGE: AREAS WE COVER  (areas.html)
+==============================================================================
+META TITLE: Complete Garden Management in Surrey, Hampshire and Sussex | Blossom
+META DESC:  Garden design, done-for-you projects and ongoing garden management across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    Areas we cover
+H1:         Close enough to know the garden and manage it properly.
+STANDFIRST: The core service area covers Surrey, Hampshire and Sussex. The practical radius depends on the type of work and how often Blossom needs to be present.
+TAG:        Surrey
+H3:         Guildford, Farnham, Godalming, Haslemere, Cranleigh, Dorking, Cobham, Esher, Weybridge, Woking and surrounding villages.
+BODY:       Services include Garden Reviews, design, individual projects, complete transformations and ongoing management. Properties within the Surrey Hills National Landscape, conservation areas or with protected trees may require additional advice and permissions.
+TAG:        Hampshire
+H3:         Bordon, Alton, Petersfield, Winchester, Alresford, Stockbridge, Romsey and surrounding villages.
+BODY:       The area includes town gardens, new-build plots, downland properties and rural gardens with very different soil, access and maintenance requirements. South Downs National Park and conservation constraints are identified at the appropriate stage.
+TAG:        Sussex
+H3:         Chichester, Midhurst, Petworth, Horsham, Haywards Heath, Cuckfield, Lewes and surrounding areas.
+BODY:       Blossom can coordinate design, maintenance and specialist projects across West and East Sussex, subject to the level of site presence each appointment requires.
+H4:         Outside the core area?
+BODY:       Ask. Design, remote advisory work and defined specialist projects may be practical further away. If Blossom cannot manage the requirement properly, we will say so before taking it on.
+
+==============================================================================
+PAGE: GARDEN JOURNAL  (journal.html)
+==============================================================================
+META TITLE: Garden Management Journal | Blossom
+META DESC:  Practical guidance for homeowners on garden design, maintenance, garden buildings, outdoor projects, suppliers, budgets and year-round garden management.
+------------------------------------------------------------------------------
+EYEBROW:    The Garden Journal
+H1:         Practical guidance for people responsible for a garden.
+STANDFIRST: Design, delivery, maintenance and the decisions that sit between them, explained without trade language or sales theatre.
+TAG:        In preparation
+H3:         What complete garden management means
+TAG:        In preparation
+H3:         What a garden manager does that a gardener does not
+TAG:        In preparation
+H3:         How to create an annual garden operating plan
+TAG:        In preparation
+H3:         When a garden office needs planning permission
+TAG:        In preparation
+H3:         How to brief and compare garden-room suppliers
+TAG:        In preparation
+H3:         What to include in a landscaping quotation
+TAG:        In preparation
+H3:         Who should manage a garden transformation
+TAG:        In preparation
+H3:         How to phase a large garden over several years
+TAG:        In preparation
+H3:         How to choose and manage a maintenance gardener
+TAG:        In preparation
+H3:         Garden drainage problems and who solves them
+TAG:        In preparation
+H3:         Planning a garden for year-round use
+TAG:        In preparation
+H3:         The real running costs of pools, ponds and outdoor buildings
+TAG:        In preparation
+H3:         How to build a reliable garden supplier network
+TAG:        In preparation
+H3:         What to inspect before paying a landscape contractor
+TAG:        In preparation
+H3:         How to prepare the garden for sale
+TAG:        In preparation
+H3:         Why autumn and winter are planning seasons
+
+==============================================================================
+PAGE: CONTACT  (contact.html)
+==============================================================================
+META TITLE: Contact Blossom | Complete Garden Management
+META DESC:  Tell Blossom what your garden needs. Garden reviews, design, done-for-you projects, complete transformations and ongoing management across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    Start the conversation
+H1:         Tell us what your garden needs.
+STANDFIRST: You do not need to identify the correct service or specialist. Describe the outcome, problem or idea and Blossom will help establish the right route.
+FORM LABEL: Your name
+FORM LABEL: Email
+FORM LABEL: Telephone
+FORM LABEL: Town, village or postcode
+FORM LABEL: What would you like help with?
+  OPTION:   Please choose
+  OPTION:   Understanding what the garden needs
+  OPTION:   Garden design or planting design
+  OPTION:   A garden office, gym or other building
+  OPTION:   Landscaping or an outdoor-living project
+  OPTION:   Help managing an existing project
+  OPTION:   A complete garden transformation
+  OPTION:   Ongoing garden management
+  OPTION:   An urgent garden problem
+  OPTION:   Something else
+  OPTION:   Not sure yet
+FORM LABEL: What would you like to achieve?
+FORM LABEL: When would you like something to happen?
+  OPTION:   Not sure yet
+  OPTION:   As soon as practical
+  OPTION:   Within three months
+  OPTION:   Within six months
+  OPTION:   Within twelve months
+  OPTION:   Planning further ahead
+FORM LABEL: Do you have a working budget or approval range?
+  OPTION:   Prefer to discuss it
+  OPTION:   Under £10,000
+  OPTION:   £10,000 to £25,000
+  OPTION:   £25,000 to £50,000
+  OPTION:   £50,000 to £100,000
+  OPTION:   Over £100,000
+  OPTION:   Not established yet
+FORM LABEL: I am happy for Blossom to use these details to respond to my enquiry and, where necessary, discuss the requirement with me. See the privacy policy
+BUTTON:     Send my enquiry
+SMALL:      Your details are used to respond to this enquiry. They are not added to a marketing list without separate permission.
+EYEBROW:    What happens next
+  -         We review what you have sent
+BODY:       We consider the location, requirement and likely route, then come back with any important first questions.
+  -         We arrange a short call
+BODY:       The call establishes whether Blossom is the right fit and whether the next step should be a Garden Review, a defined proposal or a direct specialist route.
+  -         You receive a clear next step
+BODY:       If Blossom can help, we explain the proposed service, output, fee and what information is needed to begin.
+
+==============================================================================
+PAGE: QR CAMPAIGN LANDING PAGE  (welcome.html)
+==============================================================================
+META TITLE: Everything Your Garden Needs | Blossom
+META DESC:  One trusted point of contact for garden design, projects, maintenance and complete garden management across Surrey, Hampshire and Sussex.
+------------------------------------------------------------------------------
+EYEBROW:    Complete Garden Management
+H1:         Everything your garden needs. One number to call.
+STANDFIRST: Planting, landscaping, garden buildings, outdoor living, maintenance or a complete transformation. Tell Blossom what you want from the garden and we will organise what it takes.
+CTA:        Tell us what your garden needs
+CTA:        Book a Garden Review
+EYEBROW:    What can Blossom help with?
+FORM LABEL: Your name
+FORM LABEL: Phone or email
+FORM LABEL: Town, village or postcode
+FORM LABEL: What can Blossom help with?
+  OPTION:   I want to improve the garden
+  OPTION:   I have a specific project in mind
+  OPTION:   I need somebody to manage existing work
+  OPTION:   I want ongoing garden management
+  OPTION:   I am not sure where to start
+FORM LABEL: I am happy for Blossom to use these details to respond to my enquiry. Privacy policy
+BUTTON:     Start the conversation
+H2:         You decide the outcome. We manage the detail.
+  -         We understand the garden and establish the right plan.
+  -         We source and coordinate the specialists the work requires.
+  -         We manage delivery, quality and what happens next.
+SMALL:      Serving Surrey, Hampshire and Sussex.
+BODY:       Explore the full website
+
+==============================================================================
+PAGE: THANK YOU  (thanks.html)
+==============================================================================
+META TITLE: Thank You | Blossom
+META DESC:  Your enquiry has been received.
+------------------------------------------------------------------------------
+EYEBROW:    Enquiry received
+H1:         Thank you. We will look at what your garden needs.
+STANDFIRST: You will receive a personal response with any first questions and the clearest next step.
+CTA:        Explore complete garden management
+CTA:        See the services A to Z
+
+==============================================================================
+PAGE: PRIVACY POLICY  (privacy.html)
+==============================================================================
+META TITLE: Privacy Policy | Blossom
+META DESC:  How Blossom collects, uses and protects your personal information.
+------------------------------------------------------------------------------
+EYEBROW:    Legal
+H1:         Privacy policy
+STANDFIRST: We collect only the information needed to respond to enquiries, manage appointments and deliver garden services. We do not sell personal information.
+SMALL:      Last updated: date on launch
+H2:         What we collect
+BODY:       When you make an enquiry, we collect your name, contact information, location and the information you provide about the garden or property. During an appointment, project or ongoing management service, we may also hold plans, photographs, access information, supplier details, project records, approvals, budgets and invoices relevant to the work.
+H2:         Why we use it
+BODY:       We use this information to respond to enquiries, prepare proposals, perform contracts, manage garden work, coordinate approved suppliers and meet legal, tax and insurance obligations. Optional website analytics are used only where you have consented.
+H2:         Who we share it with
+BODY:       Information is shared with contractors, consultants, suppliers and service providers only where needed to assess or deliver approved work. We explain significant project-related sharing as part of the appointment. Website and business-service providers may process data under their own contractual obligations.
+H2:         How long we keep it
+BODY:       Unsuccessful enquiries are normally deleted within 12 months. Client, project and financial records may be retained for at least six years after completion where required for contractual, tax, insurance or legal purposes.
+H2:         Your rights
+BODY:       You may request access to, correction of or deletion of your personal information, object to certain processing and withdraw consent where consent is the basis used. You also have the right to complain to the Information Commissioner's Office.
+H2:         Contact
+BODY:       Privacy contact, legal entity and email address to be confirmed before launch.
+
+==============================================================================
+PAGE: COOKIE POLICY  (cookies.html)
+==============================================================================
+META TITLE: Cookie Policy | Blossom
+META DESC:  The cookies and optional analytics this website uses, and how to change your choice.
+------------------------------------------------------------------------------
+EYEBROW:    Legal
+H1:         Cookie policy
+STANDFIRST: The website works without optional analytics. Analytics load only if you choose to allow them.
+H2:         Essential storage
+BODY:       The site may store your cookie choice and short-lived campaign attribution needed to understand which advert or QR code brought you to the enquiry page.
+H2:         Optional analytics
+BODY:       If analytics are enabled, the service and exact cookies used must be named here before launch. Analytics must not load until consent has been given where consent is required.
+H2:         Changing your choice
+BODY:       Cookie controls must provide a way to change or withdraw the choice after it has been made.
+
+==============================================================================
+PAGE: WEBSITE TERMS  (terms.html)
+==============================================================================
+META TITLE: Website Terms | Blossom
+META DESC:  Terms of use for the Blossom website.
+------------------------------------------------------------------------------
+EYEBROW:    Legal
+H1:         Website terms
+STANDFIRST: These terms apply to use of the website. Garden reviews, designs, projects and management appointments are governed by their own written agreements.
+SMALL:      Operator, legal entity, company number, registered address and contact details to be confirmed before launch.
+H2:         General information
+BODY:       Website content explains Blossom's general services. It is not design, planning, engineering, horticultural, safety or legal advice for a particular property.
+H2:         Services and pricing
+BODY:       Service descriptions and any guide prices do not constitute an offer. Scope, responsibility, authority, exclusions, fees and payment terms are confirmed in a written proposal or agreement before work begins.
+H2:         Specialist appointments
+BODY:       Some work is undertaken by independent contractors, consultants and suppliers. Their responsibility, appointment route and relationship with Blossom are defined for each engagement.
+H2:         Permissions and approvals
+BODY:       Planning permission, Building Regulations approval, listed-building consent, tree consent, Party Wall procedures and other requirements depend on the property and proposed work. No website statement confirms that a particular project is exempt.
+H2:         Intellectual property
+BODY:       The Blossom name, visual identity, illustrations, plans and written website content may not be reproduced commercially without permission. Project-specific intellectual-property terms are contained in the relevant appointment.
+H2:         Liability
+BODY:       We take care to keep the website accurate, but accept no liability for decisions made solely in reliance on its general content. Nothing excludes liability that cannot lawfully be excluded.
+H2:         Law
+BODY:       These terms are governed by the law of England and Wales.

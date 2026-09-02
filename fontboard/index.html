@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blossom Type Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Mulish:wght@400;600;700&family=Hanken+Grotesk:wght@400;600;700&family=Instrument+Sans:wght@400;600;700&family=Figtree:wght@400;600;700&family=Albert+Sans:wght@400;600;700&family=Outfit:wght@400;600;700&family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Work+Sans:wght@400;600;700&family=Jost:wght@400;500;600&family=Karla:wght@400;600;700&family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #F6F1E7; --white: #FDFBF7; --deep: #EFE7D8;
+    --yew: #22382B; --ink: #2B2A26; --soft: #5C594F;
+    --blossom: #D6A0A4; --blossom-light: #EDD3CE; --rosewood: #9C5F66;
+    --line: rgba(34,56,43,.16); --linesoft: rgba(34,56,43,.08);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--parchment); color: var(--ink); font-family: "Mulish", sans-serif; line-height: 1.6; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  header.board { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rosewood); }
+  h1 { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: clamp(40px, 5vw, 56px); color: var(--yew); margin: 8px 0 10px; }
+  .lede { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 21px; color: var(--soft); max-width: 56ch; margin: 0 0 18px; }
+  .howto { font-size: 14.5px; color: var(--soft); max-width: 70ch; }
+
+  .specimen { padding: 52px 0; border-bottom: 1px solid var(--line); }
+  .spec-grid { display: grid; gap: 36px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .spec-grid { grid-template-columns: 300px 1fr; } }
+
+  .id .fname { font-size: 34px; font-weight: 700; color: var(--yew); line-height: 1.15; margin: 0 0 6px; }
+  .badges { margin: 4px 0 10px; }
+  .badge { display: inline-block; font-family: "Mulish", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; margin: 0 6px 6px 0; }
+  .badge.current { background: var(--yew); color: var(--parchment); }
+  .badge.pick { background: var(--blossom); color: #5a3236; }
+  .badge.class { background: var(--deep); color: var(--soft); border: 1px solid var(--linesoft); }
+  .id .note { font-family: "Mulish", sans-serif; font-size: 14.5px; color: var(--soft); max-width: 34ch; }
+
+  .stack { display: grid; gap: 18px; }
+  .panel { background: var(--white); border: 1px solid var(--linesoft); border-radius: 2px; padding: 22px 26px; }
+
+  .pair-head { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: 30px; color: var(--yew); margin: 0 0 4px; }
+  .pair-eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rosewood); margin-bottom: 8px; }
+  .pair-body { font-size: 17px; line-height: 1.7; margin: 8px 0 0; max-width: 62ch; }
+
+  .navrow { display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center; font-size: 15px; font-weight: 600; color: var(--yew); }
+  .navrow .cta { background: var(--yew); color: var(--white); padding: 11px 20px; border-radius: 2px; font-size: 15px; font-weight: 700; }
+
+  .figs { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 16px; color: var(--ink); }
+  .figs strong { color: var(--yew); }
+  .microrow { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
+  .micro-label { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+
+  footer { padding: 44px 0 80px; font-size: 14px; color: var(--soft); }
+</style>
+</head>
+<body>
+
+<header class="board">
+  <div class="wrap">
+    <span class="eyebrow">Blossom · type exploration</span>
+    <h1>Twelve modern sans serifs, doing the real job</h1>
+    <p class="lede">Each candidate is shown in the roles the sans actually plays on the site: navigation, body copy, eyebrows, buttons and prices, paired with Cormorant Garamond headlines.</p>
+    <p class="howto">How to judge: read the 17px paragraph first, that is 90 percent of the job. Then check the prices (clear figures matter), the small caps eyebrow, and whether the button feels premium or techy. Mulish, the current choice, is first as the control.</p>
+  </div>
+</header>
+
+<!-- template rows; font-family set inline per specimen -->
+
+<section class="specimen" style="font-family: 'Mulish', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Mulish</p>
+      <div class="badges"><span class="badge current">Current choice</span><span class="badge class">Humanist</span></div>
+      <p class="note">The control. Soft, rounded, quietly friendly. Reads well, risks feeling slightly generic next to the serif.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Hanken Grotesk', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Hanken Grotesk</p>
+      <div class="badges"><span class="badge pick">Studio pick</span><span class="badge class">Warm grotesk</span></div>
+      <p class="note">A grotesk with warmth. Crisp and editorial next to Cormorant, premium without going cold. The closest upgrade to what Mulish does.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Instrument Sans', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Instrument Sans</p>
+      <div class="badges"><span class="badge pick">Runner-up</span><span class="badge class">Contemporary</span></div>
+      <p class="note">Fashionable and editorial, with subtle quirks in the letterforms. Feels current-season. Slightly more designed than neutral.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Figtree', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Figtree</p>
+      <div class="badges"><span class="badge class">Friendly geometric</span></div>
+      <p class="note">Open, approachable, modern. Very easy to read. Leans a touch startup-friendly rather than country-house.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Albert Sans', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Albert Sans</p>
+      <div class="badges"><span class="badge class">Geometric</span></div>
+      <p class="note">Scandinavian-clean geometry with a little warmth. Elegant in headers and buttons; body text is airy and light.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Outfit', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Outfit</p>
+      <div class="badges"><span class="badge class">Clean geometric</span></div>
+      <p class="note">Smooth, minimal, luxury-brand adjacent. Beautiful in buttons and eyebrows; long paragraphs can feel a little cool.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Manrope', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Manrope</p>
+      <div class="badges"><span class="badge class">Semi-geometric</span></div>
+      <p class="note">Precise and contemporary, superb numerals. Leans tech and product; pairs less romantically with the serif.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Plus Jakarta Sans</p>
+      <div class="badges"><span class="badge class">Modern grotesque</span></div>
+      <p class="note">Rounded corners on a grotesk skeleton. Polished and modern, popular with premium consumer brands.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Work Sans', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Work Sans</p>
+      <div class="badges"><span class="badge class">Neutral workhorse</span></div>
+      <p class="note">Dependable, invisible in the best sense. A safe pick that will never be the reason someone remembers the site.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Jost', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Jost</p>
+      <div class="badges"><span class="badge class">Futura heritage</span></div>
+      <p class="note">Elegant 1920s geometry. Gorgeous in small caps eyebrows; long body copy can feel mannered. Best as an accent, not the engine.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Karla', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Karla</p>
+      <div class="badges"><span class="badge class">Warm quirk</span></div>
+      <p class="note">Charming and personable, with visible character in the letterforms. Reads more boutique-café than established practice.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="specimen" style="font-family: 'Schibsted Grotesk', sans-serif;">
+  <div class="wrap spec-grid">
+    <div class="id">
+      <p class="fname">Schibsted Grotesk</p>
+      <div class="badges"><span class="badge class">Editorial grotesk</span></div>
+      <p class="note">Newsroom-sharp, confident, very current. Strong headlines and navigation; a touch hard-edged beside the blossom softness.</p>
+    </div>
+    <div class="stack">
+      <div class="panel">
+        <span class="pair-eyebrow">Surrey · Hampshire · Sussex</span>
+        <p class="pair-head">A beautiful garden, properly delivered.</p>
+        <p class="pair-body">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get. Quotes compared like for like, payments released against inspected work, and a weekly note in plain English.</p>
+      </div>
+      <div class="panel navrow"><span>Garden Design</span><span>Project Management</span><span>Complete Transformation</span><span>How It Works</span><span>Journal</span><span class="cta">Book a consultation</span></div>
+      <div class="panel microrow"><span class="micro-label">Figures</span><div class="figs"><span><strong>£295</strong> consultation</span><span>from <strong>£3,500</strong></span><span><strong>£30,000 to £80,000</strong></span><span><strong>10 to 15%</strong></span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Studio view:</strong> Hanken Grotesk is the strongest upgrade: crisper and more editorial than Mulish while staying warm, and it sharpens the pairing with Cormorant Garamond. Instrument Sans is the more fashionable second. Mulish remains a perfectly good keep. Swapping is one line in the site's CSS and one font link.</p>
+  </div>
+</footer>
+
+</body>
+</html>

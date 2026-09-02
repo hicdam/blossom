@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blossom Scroll Wireframe</title>
+<link rel="icon" type="image/png" href="logo-lockup.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     LOCKED CHOICES (Damo, 31 Aug):
+     Logo: blossom logo lockup.png, used exactly as supplied.
+     Palette: BG #FDFBF0 · INK #2C3947 · BUTTONS/FOOTER #F3EBCF
+              ACCENT #22382B · TINT #E4EAD8
+     Type T8 tight lux · CTA B5 underline arrow · Copy H1
+     Layouts L2 → L4 → L6 → L8 → L10 with parallax transitions
+  ============================================================ */
+  :root {
+    --bg: #FDFBF0; --ink: #2C3947; --primary: #F3EBCF;
+    --accent: #22382B; --tint: #E4EAD8;
+    --ink-soft: #55616E; --logo-cream: #FFFCF3;
+    --h1t: -0.015em; --h1l: 1.02;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Plus Jakarta Sans", sans-serif; font-size: 16px; line-height: 1.65; }
+  img { display: block; }
+
+  h1, h2 { font-family: "Fraunces", serif; font-weight: 700; letter-spacing: var(--h1t); line-height: var(--h1l); color: var(--ink); margin: 0 0 18px; text-wrap: balance; font-optical-sizing: auto; }
+  h1 { font-size: clamp(38px, 5.4vw, 60px); }
+  h2 { font-size: clamp(30px, 4vw, 48px); }
+
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 16px; }
+  .body-copy { max-width: 62ch; color: var(--ink-soft); }
+  .measure { max-width: 40em; }
+
+  .cta { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--accent); padding: 4px 2px; }
+  .cta::after { content: "→"; transition: transform .2s; }
+  .cta:hover::after { transform: translateX(4px); }
+  .cta.on-dark { color: var(--bg); border-color: var(--bg); }
+  .cta.big { font-size: 18px; }
+
+  .btn-pill { background: var(--primary); color: var(--ink); border: 1.5px solid rgba(44,57,71,.3); border-radius: 6px; padding: 10px 20px; font-weight: 700; font-size: 14px; text-decoration: none; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+  /* wireframe furniture (not part of the design) */
+  #wf-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(44,57,71,.94); color: #FDFBF0; backdrop-filter: blur(6px);
+    display: flex; gap: 18px; align-items: center; justify-content: center; flex-wrap: wrap;
+    padding: 8px 16px; font-size: 12.5px; font-weight: 600;
+  }
+  #wf-bar b { color: #D8C98F; letter-spacing: .04em; }
+  .wf-tag {
+    position: absolute; top: 74px; left: 18px; z-index: 40;
+    background: #2C3947; color: #FDFBF0; font-size: 11px; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase; padding: 5px 12px; border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.28);
+  }
+
+  .site-nav {
+    position: fixed; top: 34px; left: 0; right: 0; z-index: 90;
+    display: flex; align-items: center; gap: 22px;
+    padding: 14px clamp(20px, 4vw, 48px); color: #FDFBF0; font-size: 14px; font-weight: 600;
+    transition: background .25s ease, padding .25s ease, box-shadow .25s ease;
+  }
+  .site-nav .logo-chip { background: var(--logo-cream); border-radius: 10px; padding: 6px 14px; margin-right: auto; box-shadow: 0 4px 18px rgba(0,0,0,.28); transition: box-shadow .25s ease; }
+  .site-nav .logo-chip img { height: 54px; width: auto; transition: height .25s ease; }
+  .site-nav a { color: #FDFBF0; text-decoration: none; }
+  .site-nav.scrolled {
+    background: rgba(253, 251, 240, .96); backdrop-filter: blur(8px);
+    padding-top: 8px; padding-bottom: 8px;
+    box-shadow: 0 1px 0 rgba(44,57,71,.15), 0 8px 24px rgba(44,57,71,.08);
+  }
+  .site-nav.scrolled a { color: var(--ink); }
+  .site-nav.scrolled .logo-chip { box-shadow: none; padding: 2px 6px; }
+  .site-nav.scrolled .logo-chip img { height: 42px; }
+  .site-nav.scrolled .btn-pill { border-color: rgba(44,57,71,.3) !important; }
+
+  section { position: relative; overflow: hidden; }
+
+  /* ---------- L2: full-bleed parallax hero ---------- */
+  #hero { min-height: 96vh; display: flex; align-items: flex-end; }
+  .plx-bg { position: absolute; inset: -14% 0; z-index: 0; will-change: transform; }
+  .plx-bg img { width: 100%; height: 100%; object-fit: cover; }
+  #hero .shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(16,23,20,.86), rgba(16,23,20,.12) 60%); }
+  #hero .inner { position: relative; z-index: 2; padding: 0 0 9vh; width: 100%; }
+  #hero h1 { color: var(--bg); font-size: clamp(42px, 6.5vw, 78px); max-width: 13em; }
+  #hero .kicker { color: #D8C98F; }
+  #hero .body-copy { color: rgba(253,251,240,.88); max-width: 46ch; margin-bottom: 26px; }
+  .scroll-hint { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 2; color: rgba(253,251,240,.75); font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; }
+
+  /* ---------- L4: offset magazine ---------- */
+  #offset { padding: 16vh 0 12vh; background: var(--bg); }
+  #offset .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; align-items: start; }
+  #offset .copy { position: relative; z-index: 2; padding-top: 7vh; }
+  #offset h2 { font-size: clamp(34px, 4.6vw, 58px); margin-right: -140px; }
+  #offset .photo { position: relative; z-index: 1; margin-left: 26px; height: 520px; border-radius: 12px; overflow: hidden; box-shadow: 0 18px 50px rgba(44,57,71,.22); will-change: transform; }
+  #offset .photo img { width: 100%; height: 118%; object-fit: cover; }
+  #offset .panel { background: var(--tint); border-radius: 10px; padding: 20px 24px; max-width: 30em; margin-top: 30px; }
+  #offset .panel p { margin: 0; font-size: 14.5px; color: var(--accent); font-weight: 600; }
+
+  /* ---------- L6: pure type ---------- */
+  #puretype { padding: 18vh 0; background: #FFFDF6; }
+  #puretype .ghost {
+    position: absolute; top: 4vh; right: -4vw; z-index: 0;
+    font-family: "Fraunces", serif; font-weight: 700; font-style: italic;
+    font-size: clamp(160px, 26vw, 340px); color: var(--tint); line-height: 1;
+    user-select: none; pointer-events: none; will-change: transform;
+  }
+  #puretype .inner { position: relative; z-index: 1; }
+  #puretype h2 { font-size: clamp(38px, 5.8vw, 72px); max-width: 15em; }
+  #puretype .rule { width: 84px; height: 4px; background: var(--accent); margin: 30px 0; }
+  .statgrid { display: flex; gap: clamp(24px, 5vw, 72px); flex-wrap: wrap; margin-top: 40px; }
+  .stat .n { font-family: "Fraunces", serif; font-weight: 700; font-size: 44px; color: var(--accent); line-height: 1; }
+  .stat .l { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; max-width: 20ch; }
+
+  /* ---------- L8: boxed card over parallax band ---------- */
+  #boxed { min-height: 88vh; display: flex; align-items: center; }
+  #boxed .card {
+    position: relative; z-index: 2; background: var(--bg); border-radius: 14px;
+    padding: clamp(30px, 4.5vw, 56px); max-width: 620px;
+    margin: 12vh auto; box-shadow: 0 22px 60px rgba(24, 32, 26, .38);
+  }
+  #boxed .card h2 { font-size: clamp(30px, 4vw, 46px); }
+  #boxed .shade { position: absolute; inset: 0; z-index: 1; background: rgba(30, 40, 34, .25); }
+
+  /* ---------- L10: checkerboard ---------- */
+  #checker { background: #FFFDF6; }
+  .check-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .check-cell { min-height: 46vh; display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 4.5vw, 60px); }
+  .check-cell.photo-cell { padding: 0; position: relative; overflow: hidden; }
+  .check-cell.photo-cell img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .check-cell h2 { font-size: clamp(26px, 3vw, 38px); }
+  .check-cell.tint-cell { background: var(--tint); }
+  .check-cell.deep { background: var(--accent); }
+  .check-cell.deep h2 { color: var(--bg); }
+  .check-cell.deep p { color: rgba(253,251,240,.85); }
+  .check-cell.deep .kicker { color: #D8C98F; }
+  .check-cell.deep .cta { color: var(--bg); border-color: var(--bg); }
+
+  /* footer stub: Damo's Buttons & footer colour */
+  footer { background: var(--primary); color: var(--ink); padding: 46px 0; font-size: 14px; border-top: 1px solid rgba(44,57,71,.15); }
+  footer .wrap { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+  footer img { height: 72px; border-radius: 8px; }
+
+  @media (max-width: 860px) {
+    #offset .grid, .check-grid { grid-template-columns: 1fr; }
+    #offset h2 { margin-right: 0; }
+    #offset .photo { margin-left: 0; height: 320px; margin-top: 26px; }
+    .check-cell { min-height: 34vh; }
+    .check-cell.photo-cell { min-height: 40vh; }
+    .site-nav .logo-chip img { height: 40px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .plx-bg, #offset .photo, #puretype .ghost { transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="wf-bar">
+  <span>WIREFRAME · scrolling parallax prototype</span>
+  <b>Damo's palette: #FDFBF0 · #2C3947 · #F3EBCF · #22382B · #E4EAD8 · locked logo</b>
+  <span>L2 → L4 → L6 → L8 → L10</span>
+</div>
+
+<!-- ============ L2 · FULL-BLEED PARALLAX HERO ============ -->
+<section id="hero">
+  <span class="wf-tag" style="left: auto; right: 18px; top: 130px;">L2 · Full-bleed hero</span>
+  <div class="plx-bg" data-plx="-14"><img src="sunbeams-path.jpg" alt="Morning sun through mature trees over a garden path"></div>
+  <div class="shade"></div>
+  <nav class="site-nav">
+    <span class="logo-chip"><img src="logo-lockup.png" alt="Blossom"></span>
+    <a href="#offset">Garden Design</a><a href="#offset">Project Management</a>
+    <a class="btn-pill" href="#boxed" style="border-color: rgba(253,251,240,.0);">Book a consultation</a>
+  </nav>
+  <div class="inner wrap">
+    <span class="kicker">Surrey · Hampshire · Sussex</span>
+    <h1>A beautiful garden, properly delivered.</h1>
+    <p class="body-copy">We design gardens that suit your site, your budget and the way you live. Then we manage the build, so the garden you imagined is the garden you get.</p>
+    <a class="cta on-dark big" href="#boxed">Book a consultation</a>
+  </div>
+  <span class="scroll-hint">Scroll</span>
+</section>
+
+<!-- ============ L4 · OFFSET MAGAZINE ============ -->
+<section id="offset">
+  <span class="wf-tag">L4 · Offset magazine</span>
+  <div class="wrap grid">
+    <div class="copy">
+      <span class="kicker">Three ways to work with us</span>
+      <h2>Design. Management. Or both.</h2>
+      <p class="body-copy measure">Some clients need a designer. Some already have plans and need someone to run the build. Many want the whole journey handled under one accountable lead, from first sketch to snagging list.</p>
+      <a class="cta" href="#checker">Explore the services</a>
+      <div class="panel"><p>Every route starts with a £295 consultation, redeemed in full against any further work.</p></div>
+    </div>
+    <div class="photo" data-plx="7"><img src="courtyard-bench.jpg" alt="A calm courtyard garden with a curved bench"></div>
+  </div>
+</section>
+
+<!-- ============ L6 · PURE TYPE ============ -->
+<section id="puretype">
+  <span class="wf-tag">L6 · Pure type</span>
+  <div class="ghost" data-plx="9" aria-hidden="true">B</div>
+  <div class="wrap inner">
+    <span class="kicker">Why we exist</span>
+    <h2>Most gardens do not fail at the drawing stage. They fail in the delivery.</h2>
+    <div class="rule"></div>
+    <p class="body-copy">Quotes that cannot be compared. Workmanship a homeowner cannot judge. Budgets nobody is holding. Blossom puts a professional on your side of the project: specification, like-for-like tenders, weekly inspections, staged payments.</p>
+    <div class="statgrid">
+      <div class="stat"><div class="n">01</div><div class="l">One accountable lead</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Stages, approved one at a time</div></div>
+      <div class="stat"><div class="n">52</div><div class="l">Weeks a year we look after gardens</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ L8 · BOXED CARD OVER PARALLAX BAND ============ -->
+<section id="boxed">
+  <span class="wf-tag">L8 · Boxed card</span>
+  <div class="plx-bg" data-plx="-10"><img src="daisies.jpg" alt="Daisies in long meadow grass in evening light"></div>
+  <div class="shade"></div>
+  <div class="wrap" style="position: relative; z-index: 2;">
+    <div class="card">
+      <span class="kicker">Start the conversation</span>
+      <h2>Tell us about your garden</h2>
+      <p class="body-copy">A consultation is 90 minutes at your home and a written summary of your options. The fee is redeemed in full if you go ahead, and you commit stage by stage, never all at once.</p>
+      <a class="cta big" href="#footer">Book a consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ L10 · CHECKERBOARD ============ -->
+<section id="checker">
+  <span class="wf-tag">L10 · Checkerboard</span>
+  <div class="check-grid">
+    <div class="check-cell">
+      <span class="kicker">Design only</span>
+      <h2>Garden Design</h2>
+      <p class="body-copy">Masterplan, construction drawings and planting design, costed against your real budget.</p>
+      <a class="cta" href="#">See garden design</a>
+    </div>
+    <div class="check-cell photo-cell"><img src="formal-garden.jpg" alt="Formal garden with clipped box and a paved path"></div>
+    <div class="check-cell photo-cell"><img src="patio-dining.jpg" alt="Finished modern garden with dining terrace and steps"></div>
+    <div class="check-cell tint-cell">
+      <span class="kicker">Management only</span>
+      <h2>Independent Project Management</h2>
+      <p class="body-copy" style="color: #47555F;">Tender, contracts, weekly inspections and staged payments, whoever designed the garden.</p>
+      <a class="cta" href="#">See project management</a>
+    </div>
+    <div class="check-cell deep">
+      <span class="kicker">The complete service</span>
+      <h2>Complete Garden Transformation</h2>
+      <p class="body-copy">One lead from first idea to finished garden. You make the decisions, we do the running.</p>
+      <a class="cta" href="#">See the complete service</a>
+    </div>
+    <div class="check-cell photo-cell"><img src="pergola-path.jpg" alt="Brick path through a leafy pergola"></div>
+    <div class="check-cell photo-cell"><img src="country-garden.jpg" alt="Country garden with table, chairs and treehouse"></div>
+    <div class="check-cell">
+      <span class="kicker">Year-round care</span>
+      <h2>The Garden Year</h2>
+      <p class="body-copy">Four seasonal visits and a written garden calendar, so the garden matures as designed.</p>
+      <a class="cta" href="#">See The Garden Year</a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="wrap">
+    <img src="logo-lockup.png" alt="Blossom logo">
+    <span>Wireframe footer stub in your Buttons &amp; footer colour · full footer as on the live site</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const els = Array.from(document.querySelectorAll("[data-plx]"));
+  let ticking = false;
+  function update(){
+    const vh = window.innerHeight;
+    els.forEach(el => {
+      const host = el.closest("section") || el.parentElement;
+      const r = host.getBoundingClientRect();
+      const progress = (r.top + r.height / 2 - vh / 2) / vh;
+      const speed = parseFloat(el.dataset.plx);
+      el.style.transform = "translate3d(0," + (progress * speed * 10).toFixed(1) + "px,0)";
+    });
+    ticking = false;
+  }
+  window.addEventListener("scroll", () => { if (!ticking){ ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  const nav = document.querySelector(".site-nav");
+  window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 40), { passive: true });
+  nav.classList.toggle("scrolled", window.scrollY > 40);
+  window.addEventListener("resize", update);
+  update();
+})();
+</script>
+</body>
+</html>

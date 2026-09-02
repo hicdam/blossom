@@ -97,5 +97,5 @@ Month 3: first case study (or documented own-garden/demo project), town pages fo
 - Founder name(s), background, qualifications, memberships, insurance details.
 - Real project photography, case studies, testimonials.
 - Phone number, email, business address, company registration, domain name.
-- Final pricing sign-off.
+- Final pricing sign-off. DONE 2 Sep 2026: all five recommendations approved by Damo and live on the site as guide figures.
 - Form backend (Formspree/other), GA4 property, booking tool (Calendly or similar) if wanted.

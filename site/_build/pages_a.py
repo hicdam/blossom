@@ -134,7 +134,7 @@ GARDEN_MANAGEMENT = {
             <span class="eyebrow">Commercial clarity</span>
             <h3>You know what Blossom costs and what everyone else is charging.</h3>
             <p style="font-size: 15px;">Ongoing management uses an agreed onboarding fee and management retainer. Project work and specialist services are scoped separately. Any supplier commission, procurement fee or product margin relevant to your appointment is disclosed before you approve it.</p>
-            <p class="smallprint">Exact fees depend on the size, complexity and level of responsibility involved. They are confirmed in writing before the service begins.</p>
+            <p class="smallprint">As a guide: Garden Review £295, design fees typically 10 to 15 percent of the build budget, project management from £950 a month, retained management from £650 a year. Exact fees depend on the size, complexity and level of responsibility involved and are confirmed in writing before the service begins.</p>
           </div>
         </div>
       </div>
@@ -256,6 +256,8 @@ GARDEN_PROJECTS = {
           <p>You retain the important decisions. Blossom takes away the chasing, comparing, coordinating and problem solving.</p>
           <h3 style="margin-top: 28px;">Specialist work</h3>
           <p>Planning consultants, architects, structural engineers, arborists, ecologists, electricians, gas engineers and other regulated specialists are appointed when the project requires them. Blossom coordinates their contribution and keeps it connected to the wider garden.</p>
+          <h3 style="margin-top: 28px;">Fees</h3>
+          <p>As a guide, project management is from £950 a month while work is on site, or 10 percent of the build cost for full management from tender to handover. The basis is agreed and confirmed in writing before the project starts.</p>
         </div>
         <ol class="process reveal">
           <li><p>Define the requirement and success criteria</p></li>
@@ -364,6 +366,7 @@ GARDEN_DESIGN = {
             <span class="eyebrow">Design fees</span>
             <h2>Defined by the work, agreed before it starts.</h2>
             <p>Design is proposed in clear stages with an output and fee for each. Surveys and specialist advice are identified separately, so you know what is included and what decisions sit ahead.</p>
+            <p>As a guide, design fees are typically 10 to 15 percent of the build budget, agreed as a fixed fee before work starts. Most full garden designs start from around £3,500. Every figure is confirmed in writing before the work begins.</p>
           </div>
         </div>
       </div>
@@ -436,7 +439,7 @@ TRANSFORMATION = {
         <span class="eyebrow">Budget and programme</span>
         <h2>Ambition, money and time kept in the same conversation.</h2>
         <p>The working budget and desired completion are discussed from the outset. Estimates become firmer as the design, specification and supplier proposals develop. Changes are recorded and their implications explained before they are approved.</p>
-        <p>No website range can responsibly price a garden without understanding its size, access, levels, ground, structures and specification. The Garden Review exists to establish a realistic starting position.</p>
+        <p>As a guide, complete garden transformations of this kind typically sit between £30,000 and £80,000 all in, and we design to an agreed budget from day one. No website range can price a particular garden without understanding its size, access, levels, ground, structures and specification. The Garden Review exists to establish a realistic starting position.</p>
       </div>
       <div class="split-photo"><img src="assets/img/photos/patio-dining.jpg" alt="A finished modern garden with dining terrace, raised beds and granite steps"></div>
     </section>
@@ -535,7 +538,7 @@ YOUR_GARDEN_MANAGER = {
         <div class="reveal">
           <span class="eyebrow">Management fees</span>
           <h2>An onboarding stage and an agreed monthly service.</h2>
-          <p>The Garden Management Review establishes the starting point. The ongoing fee then reflects the garden's scale, complexity, supplier network, inspection frequency and the level of responsibility you want Blossom to take.</p>
+          <p>The Garden Management Review establishes the starting point. As a guide, the ongoing retainer starts from £650 a year and reflects the garden's scale, complexity, supplier network, inspection frequency and the level of responsibility you want Blossom to take.</p>
           <p>Projects and significant specialist works are scoped separately. There are no hidden charges or undisclosed commercial arrangements.</p>
         </div>
       </div>
@@ -610,7 +613,7 @@ GARDEN_REVIEW = {
         <div class="reveal">
           <span class="eyebrow">What you receive</span>
           <h2>A practical route, not a generic inspiration board.</h2>
-          <p>The exact review format and fee are confirmed before booking. If more technical investigation is required, it is recommended rather than guessed at.</p>
+          <p>As a guide, a Garden Review is £295, confirmed in writing before booking, and is taken off any later design or management fee. If more technical investigation is required, it is recommended rather than guessed at.</p>
         </div>
         <div class="reveal">
           <div class="receive" style="background: var(--surface);">

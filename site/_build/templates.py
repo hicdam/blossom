@@ -64,6 +64,7 @@ def head(title, desc, path, extra_schema="", noindex=False):
   <meta property="og:title" content="%s">
   <meta property="og:description" content="%s">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="%s/%s">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -71,7 +72,7 @@ def head(title, desc, path, extra_schema="", noindex=False):
   %s
 </head>
 <body>
-""" % (title, desc, DOMAIN, path, robots, title, desc, schema_blocks)
+""" % (title, desc, DOMAIN, path, robots, title, desc, DOMAIN, path, schema_blocks)
 
 
 def header(active=""):

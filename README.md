@@ -21,7 +21,7 @@ Then open http://localhost:8901/ (was left running and open in Chrome).
 3. Domain: update `DOMAIN` in `site/_build/templates.py`, also in `index.html` head, rebuild.
 4. Form endpoint: replace `REPLACE_WITH_FORM_ENDPOINT...` action in contact.html + welcome.html (or in `pages_b.py`/`build.py` and rebuild). Formspree or similar.
 5. GA4 measurement ID: `GA_MEASUREMENT_ID` in `site/assets/js/main.js`.
-6. Pricing: signed off by Damo on 2 Sep 2026 and published as guide figures on the five offer pages, the Garden Management page and the FAQ. Every figure is labelled "as a guide" and confirmed in writing.
+6. Pricing: signed off by Damo on 2 Sep 2026 (Your Garden Manager from £250 a month) and published as guide figures on the five offer pages, the Garden Management page and the FAQ. Every figure is labelled "as a guide" and confirmed in writing.
 7. Project photos + testimonials as they exist. Never invent.
 
 ## QR codes for print

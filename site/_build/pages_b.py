@@ -24,7 +24,7 @@ FAQ_ITEMS = [
     ("How are Blossom's fees calculated?",
      "The basis depends on the work. It may be a fixed consultation fee, staged design fee, fixed project fee, monthly project-management fee, percentage fee, ongoing retainer or a disclosed procurement arrangement. The basis and inclusions are confirmed in writing before appointment."),
     ("What does Blossom cost, as a guide?",
-     "Garden Review £295, taken off any later design or management fee. Garden Design typically 10 to 15 percent of the build budget, with most full designs from around £3,500. Garden Projects management from £950 a month, or 10 percent of the build cost from tender to handover. Complete transformations typically £30,000 to £80,000 all in. Your Garden Manager retainer from £650 a year. Every figure is a guide and is confirmed in writing before appointment."),
+     "Garden Review £295, taken off any later design or management fee. Garden Design typically 10 to 15 percent of the build budget, with most full designs from around £3,500. Garden Projects management from £950 a month, or 10 percent of the build cost from tender to handover. Complete transformations typically £30,000 to £80,000 all in. Your Garden Manager retainer from £250 a month. Every figure is a guide and is confirmed in writing before appointment."),
     ("Does Blossom receive supplier commissions?",
      "Blossom does not use hidden commercial arrangements. If a relevant supplier commission, procurement fee or product margin applies, it is disclosed as part of the proposal before you approve the appointment or purchase."),
     ("Will Blossom control payments to contractors?",

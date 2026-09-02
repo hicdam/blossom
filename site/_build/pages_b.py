@@ -1,5 +1,15 @@
 # Content and utility pages. COPY DECK V2 verbatim.
 from pages_a import hero
+from templates import DOMAIN
+import os
+
+# Founder portrait: drop a photo at assets/img/photos/damian-hickey.jpg and rebuild.
+# Nothing is shown until the file exists. Never a stock or placeholder image.
+_PORTRAIT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "img", "photos", "damian-hickey.jpg")
+FOUNDER_PORTRAIT = (
+    '<div class="founder-portrait reveal"><img src="assets/img/photos/damian-hickey.jpg" alt="Damian Hickey, founder of Blossom"></div>'
+    if os.path.exists(_PORTRAIT) else ""
+)
 
 FAQ_ITEMS = [
     ("Is Blossom a garden designer, project manager or maintenance company?",
@@ -109,10 +119,26 @@ PROJECTS = {
 
     <section class="section section-deep">
       <div class="wrap">
-        <div class="grid-3">
-          <div class="placeholder-slot"><span class="tag">Required input</span><p>First case study slot, following the structure opposite.</p></div>
-          <div class="placeholder-slot"><span class="tag">Required input</span><p>Second case study slot, same structure.</p></div>
-          <div class="placeholder-slot"><span class="tag">Required input</span><p>Third case study slot, same structure.</p></div>
+        <div class="reveal">
+          <span class="eyebrow">In the meantime</span>
+          <h2>Three ways to judge Blossom before the first case study is published.</h2>
+        </div>
+        <div class="grid-3" style="margin-top: 40px;">
+          <article class="card reveal">
+            <p class="card-meta">The method</p>
+            <p>See how a garden moves from first review to completed work, and who is responsible at each stage.</p>
+            <a class="card-link" href="how-it-works.html">How Blossom works</a>
+          </article>
+          <article class="card reveal">
+            <p class="card-meta">The founder</p>
+            <p>More than 30 years of running complex projects, budgets and specialist teams, now applied to the garden.</p>
+            <a class="card-link" href="about.html">About Damian Hickey</a>
+          </article>
+          <article class="card reveal">
+            <p class="card-meta">The first step</p>
+            <p>A Garden Review gives you a clear plan for what should happen next, whatever you decide to do with it.</p>
+            <a class="card-link" href="garden-review.html">Start with a Garden Review</a>
+          </article>
         </div>
       </div>
     </section>
@@ -144,6 +170,7 @@ ABOUT = {
           <span class="eyebrow">Meet the founder</span>
           <h2>Damian Hickey</h2>
         </div>
+''' + FOUNDER_PORTRAIT + '''
         <div class="grid-2" style="align-items: start; margin-top: 18px;">
           <div class="reveal">
             <p>Damian is a designer and project leader with more than 30 years of experience turning complex ideas into delivered outcomes for large organisations and global real-estate environments.</p>
@@ -291,7 +318,7 @@ CONTACT = {
       <div class="wrap">
         <div class="grid-2" style="align-items: start; gap: clamp(32px, 4vw, 56px);">
           <div class="form-panel reveal">
-            <form data-enquiry id="enquiry-form" method="POST" action="https://REPLACE_WITH_FORM_ENDPOINT.example/f/blossom" data-thanks="thanks.html">
+            <form data-enquiry id="enquiry-form" method="POST" action="https://formsubmit.co/hello@blossomgarden.design" data-thanks="thanks.html">
               <div class="form-grid">
                 <div>
                   <label for="name">Your name</label>
@@ -356,6 +383,11 @@ CONTACT = {
                   <input type="checkbox" id="consent" name="consent" required>
                   <label for="consent">I am happy for Blossom to use these details to respond to my enquiry and, where necessary, discuss the requirement with me. See the <a href="privacy.html">privacy policy</a>.</label>
                 </div>
+                <input type="hidden" name="_subject" value="New Blossom enquiry from the website">
+                <input type="hidden" name="_next" value="''' + DOMAIN + '''/thanks.html">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
                 <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content">
                 <input type="hidden" name="landing_page"><input type="hidden" name="referrer">
@@ -452,9 +484,9 @@ COOKIES = {
         <h2>Essential storage</h2>
         <p>The site may store your cookie choice and short-lived campaign attribution needed to understand which advert or QR code brought you to the enquiry page.</p>
         <h2>Optional analytics</h2>
-        <p>If analytics are enabled, the service and exact cookies used must be named here before launch. Analytics must not load until consent has been given where consent is required.</p>
+        <p>If you accept analytics, the site loads Google Analytics 4 (provided by Google). It sets the cookies <code>_ga</code> and <code>_ga_MS76VT312E</code>, which last up to two years and tell us which pages are visited and roughly how visitors arrive. IP addresses are anonymised. Nothing loads until you choose "Accept analytics".</p>
         <h2>Changing your choice</h2>
-        <p>Cookie controls must provide a way to change or withdraw the choice after it has been made.</p>
+        <p>You can change or withdraw your choice at any time. <a href="#" data-consent-change>Change your cookie choice</a> and the banner will reappear so you can choose again.</p>
       </div>
     </section>
 ''',

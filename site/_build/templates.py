@@ -68,7 +68,7 @@ def head(title, desc, path, extra_schema="", noindex=False):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=23">
+  <link rel="stylesheet" href="assets/css/style.css?v=24">
   %s
 </head>
 <body>
@@ -162,7 +162,7 @@ FOOTER = """  <footer class="site-footer">
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=23"></script>
+  <script src="assets/js/main.js?v=24"></script>
 </body>
 </html>
 """

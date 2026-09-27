@@ -140,54 +140,46 @@ PROJECTS = {
 
 ABOUT = {
     "path": "about.html",
-    "title": "About Blossom | Our Approach to Garden Design, Build and Maintenance",
-    "desc": "How Blossom approaches garden design, build and maintenance: thoughtful design, practical construction, clear project discipline and care for the long term.",
+    "title": "About Blossom | Our Approach",
+    "desc": "How Blossom approaches garden design, build and maintenance: clear thinking, practical construction and care for the long term.",
     "active": "about.html",
     "schema": "",
     "body": hero("olive-steps.jpg", "Stone steps built into a white wall beneath an old olive tree",
-        "About Blossom", "Design, build and maintenance considered as one connected system.",
-        "Blossom was built around a simple idea: gardens should be designed with the same care they are built, and managed with the same discipline as any other meaningful investment in a property.", "") + '''
+        "About Blossom", "Design it well. Build it properly. Look after it for the long term.",
+        "Blossom treats design, construction and maintenance as one connected job.", "") + '''
 
     <section class="section">
       <div class="wrap-narrow reveal">
-        <span class="eyebrow">Our approach</span>
-        <h2>A garden project should work as well as it looks.</h2>
-        <p>We look beyond the finished photograph. We think about how the garden will be used, how work will be built, what access and site conditions mean for delivery, what it will cost to maintain, and how each decision affects the next.</p>
-        <p>The result is a joined-up approach to design, construction and ongoing care, with fewer gaps between the people, decisions and stages that make a project succeed.</p>
+        <span class="eyebrow">One joined-up approach</span>
+        <h2>Better decisions early. Fewer surprises later.</h2>
+        <p>We think about how the garden will be used, how it will be built and what it will need over time.</p>
       </div>
     </section>
 
     <section class="section section-deep">
       <div class="wrap">
-        <div class="center reveal">
-          <span class="eyebrow">The principles behind our approach</span>
-        </div>
-        <div class="grid-3" style="margin-top: 32px;">
-          <article class="card reveal"><h3>Design from real life</h3><p>Layout, proportions, materials and planting are considered alongside the property, access, budget and the way the garden will actually be used.</p></article>
-          <article class="card reveal"><h3>Understand before building</h3><p>Site conditions, levels, drainage, access, hazards, dependencies and planning considerations are identified early so problems can be dealt with before they become expensive.</p></article>
-          <article class="card reveal"><h3>Design, build and maintain together</h3><p>Design decisions consider how something will be constructed and what it will need afterwards. The whole lifecycle matters, not just the day the work is finished.</p></article>
-          <article class="card reveal"><h3>Commercial discipline</h3><p>Scope, sequencing, suppliers, costs, risks and changes are managed deliberately so the budget goes into the result rather than avoidable delay, waste or rework.</p></article>
-          <article class="card reveal"><h3>Technology where it helps</h3><p>Photography, video, digital site information and AI-supported analysis can help us understand a site, test options, identify constraints and plan work more clearly.</p></article>
-          <article class="card reveal"><h3>Built for the long term</h3><p>Materials, construction details and practical upkeep are considered from the start so the finished work can perform well over time.</p></article>
+        <div class="grid-4">
+          <article class="card reveal"><h3>Design for real life</h3><p>How you use the space comes first.</p></article>
+          <article class="card reveal"><h3>Understand the site</h3><p>Access, levels, drainage, risks and planning are considered early.</p></article>
+          <article class="card reveal"><h3>Build with discipline</h3><p>Clear scope, sequencing, costs and quality control.</p></article>
+          <article class="card reveal"><h3>Think long term</h3><p>Materials, maintenance and future upkeep are part of the design.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap-narrow reveal">
-        <span class="eyebrow">Where the approach comes from</span>
-        <h2>Different disciplines, one way of working.</h2>
-        <p>Blossom brings together experience from design, practical construction, property operations, technology and complex project delivery. Those disciplines share the same basic challenge: understand what is needed, make good decisions early, coordinate the work properly and deliver an outcome that performs in the real world.</p>
-        <p>Our approach has also been shaped by experience working in large-scale facilities management, where cost, risk, programme, quality and long-term performance all matter. We apply those same principles at a scale that makes sense for homes and local businesses.</p>
-        <p>Combined with hands-on landscaping and carpentry capability, that gives Blossom a perspective across the whole job rather than one isolated trade or stage.</p>
+        <span class="eyebrow">Where it comes from</span>
+        <h2>Different disciplines. One practical way of working.</h2>
+        <p>Blossom combines design thinking, hands-on construction, property and facilities management, technology and complex project delivery. We apply that experience to gardens in a practical, proportionate way.</p>
       </div>
     </section>
 
     <section class="section section-yew">
       <div class="wrap-narrow center reveal">
-        <h2>Thoughtful design. Practical delivery. Care for the long term.</h2>
+        <h2>Have a project in mind?</h2>
         <div class="btn-row on-dark" style="justify-content: center;">
-          <a class="cta-link big" href="contact.html">Start a conversation</a>
+          <a class="cta-link big" href="contact.html">Tell us about your project</a>
         </div>
       </div>
     </section>
